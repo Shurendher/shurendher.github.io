@@ -1,44 +1,257 @@
+<!-- ===============================
+     GitHub Pages – Initial Site Skeleton
+     Author: Shurendher
+     Date: 2025‑05‑18
+     -----------------------------------
+     Files contained in this snippet:
+       • index.html   – Homepage with hero + navbar
+       • projects.html – Landing page placeholder
+       • blog.html    – "Coming soon" placeholder
+       • assets/css/style.css – Light styling
+     Copy each section into its own file inside your
+     <username>.github.io repository keeping the paths.
+     =============================== -->
+
+
+<!-- =================================================
+     index.html
+     ================================================= -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shurendher's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shurendher | Mechanical • Robotics • Embedded</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Google Fonts – quick, lightweight -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <header>
-        <h1>Welcome to Shurendher's Portfolio</h1>
-        <nav>
-            <a href="#about">About Me</a> |
-            <a href="#projects">Projects</a> |
-            <a href="#contact">Contact</a>
-        </nav>
+    <!-- ===== NAVBAR ===== -->
+    <header class="navbar">
+        <div class="container nav-inner">
+            <a href="/" class="logo">Shurendher</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+                <button class="burger" aria-label="Toggle navigation">
+                    ☰
+                </button>
+            </nav>
+        </div>
     </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Mechanical Engineer passionate about Robotics and Design.</p>
+    <!-- ===== HERO / INTRO ===== -->
+    <section class="hero container">
+        <img src="assets/images/profile.jpg" alt="Portrait of Shurendher" class="hero-img" />
+        <div class="hero-text">
+            <h1>Hi, I’m Shurendher.</h1>
+            <p>
+                Mechanical engineer turned <strong>robotics</strong> &amp; <strong>embedded‑systems</strong>
+                developer. I design precise mechanisms, write control firmware, and build
+                autonomous behaviours — turning ideas into hardware that <em>moves</em>.
+            </p>
+            <a class="btn" href="projects.html">View my work →</a>
+        </div>
     </section>
 
-    <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-        <li><a href="projects/gearbox.html">Gearbox Assembly & FEA Analysis</a></li>
-        <li>Robotic Arm Design (Coming Soon)</li>
-        <li>Autonomous Mobile Robot (Coming Soon)</li>
-    </ul>
+    <!-- ===== THREE-WAY SKILLS GRAPHIC ===== -->
+    <section class="skills container">
+        <h2>Where my worlds meet</h2>
+        <div class="skill-grid">
+            <div class="skill-card">
+                <h3>Mechanical Design</h3>
+                <p>CAD • FEA • DFM • Rapid prototyping</p>
+            </div>
+            <div class="skill-card">
+                <h3>Robotics</h3>
+                <p>ROS 2 • Navigation • Simulation • SLAM</p>
+            </div>
+            <div class="skill-card">
+                <h3>Embedded / Mechatronics</h3>
+                <p>C++ • SPI / I²C • Motor control • RTOS</p>
+            </div>
+        </div>
     </section>
 
-
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: sampatsr@mail.uc.edu</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/shurensampath/">LinkedIn Profile</a></p>
+    <!-- ===== QUICK LINKS SECTION ===== -->
+    <section class="cta container">
+        <h2>Dive deeper</h2>
+        <div class="cta-links">
+            <a class="card-link" href="projects.html">Projects</a>
+            <a class="card-link" href="resume.html">Résumé</a>
+            <a class="card-link" href="blog.html">Blog</a>
+        </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Shurendher. All rights reserved.</p>
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p>© 2025 Shurendher</p>
+            <div class="social">
+                <a href="https://www.linkedin.com/in/shurendher" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/shurendher" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://behance.net/your‑behance" target="_blank" rel="noopener">Behance</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== MOBILE NAV SCRIPT ===== -->
+    <script>
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>
+
+
+<!-- =================================================
+     projects.html – basic placeholder (update later)
+     ================================================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | Shurendher</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-inner">
+            <a href="/" class="logo">Shurendher</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+                <button class="burger" aria-label="Toggle navigation">☰</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 style="margin-top:3rem;">Projects</h1>
+        <p>Detailed case studies coming soon! ⚙️</p>
+        <p>In the meantime, feel free to browse my <a href="https://github.com/shurendher?tab=repositories" target="_blank">GitHub repos</a>.</p>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner"><p>© 2025 Shurendher</p></div>
     </footer>
 </body>
 </html>
+
+
+<!-- =================================================
+     blog.html – coming soon placeholder
+     ================================================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog | Shurendher</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-inner">
+            <a href="/" class="logo">Shurendher</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                </ul>
+                <button class="burger" aria-label="Toggle navigation">☰</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 style="margin-top:3rem;">Blog</h1>
+        <p>🚧 Posts under construction — stay tuned!</p>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner"><p>© 2025 Shurendher</p></div>
+    </footer>
+</body>
+</html>
+
+
+<!-- =================================================
+     assets/css/style.css – quick base styles
+     ================================================= -->
+/* Root variables & resets */
+:root {
+    --accent: #ff6b35;
+    --dark: #222;
+    --light: #fafafa;
+    --gray: #666;
+    --radius: 0.6rem;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--dark);
+    background: var(--light);
+    line-height: 1.6;
+}
+.container { width: 90%; max-width: 1000px; margin: 0 auto; }
+
+/* ===== NAVBAR ===== */
+.navbar { background: white; box-shadow: 0 2px 4px rgba(0,0,0,.05); }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 0.8rem 0; }
+.logo { font-weight: 600; color: var(--dark); text-decoration: none; }
+.nav-links { list-style: none; display: flex; gap: 1.2rem; }
+.nav-links a { text-decoration: none; color: var(--gray); font-weight: 500; }
+.nav-links a.active, .nav-links a:hover { color: var(--accent); }
+.burger { display: none; font-size: 1.4rem; background: none; border: none; cursor: pointer; }
+
+/* ===== HERO ===== */
+.hero { display: flex; flex-wrap: wrap; align-items: center; gap: 2rem; padding: 4rem 0 3rem; }
+.hero-img { width: 180px; height: 180px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,.1); }
+.hero-text { flex: 1; }
+.hero-text h1 { font-size: 2.4rem; margin-bottom: 0.6rem; }
+.hero-text p { font-size: 1rem; margin-bottom: 1rem; max-width: 40ch; }
+.btn { display: inline-block; background: var(--accent); color: white; padding: 0.6rem 1.2rem; border-radius: var(--radius); text-decoration: none; font-weight: 600; }
+
+/* ===== SKILLS ===== */
+.skills { text-align: center; padding: 2rem 0 3rem; }
+.skills h2 { margin-bottom: 1.2rem; font-size: 1.8rem; }
+.skill-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); }
+.skill-card { background: white; border-radius: var(--radius); padding: 1.4rem; box-shadow: 0 2px 8px rgba(0,0,0,.05); }
+.skill-card h3 { color: var(--accent); margin-bottom: 0.4rem; font-size: 1.1rem; }
+.skill-card p { font-size: 0.9rem; color: var(--gray); }
+
+/* ===== CTA LINKS ===== */
+.cta { text-align: center; padding-bottom: 4rem; }
+.cta h2 { margin-bottom: 1rem; }
+.cta-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+.card-link { background: var(--dark); color: white; padding: 0.8rem 1.4rem; border-radius: var(--radius); text-decoration: none; font-weight: 500; transition: background .2s; }
+.card-link:hover { background: var(--accent); }
+
+/* ===== FOOTER ===== */
+.footer { background: #f1f1f1; padding: 1rem 0; font-size: 0.8rem; }
+.footer-inner { display: flex; justify-content: space-between; align-items: center; }
+.social a { margin-left: 1rem; color: var(--gray); text-decoration: none; }
+.social a:hover { color: var(--accent); }
+
+/* ===== RESPONSIVE NAV ===== */
+@media (max-width: 640px) {
+    .nav-links { position: absolute; top: 64px; right: 0; background: white; flex-direction: column; align-items: flex-start; padding: 1rem; gap: 0.8rem; box-shadow: 0 2px 8px rgba(0,0,0,.05); display: none; }
+    .nav-links.open { display: flex; }
+    .burger { display: block; }
+}
