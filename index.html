@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shurendher | Mechanical • Robotics • Embedded</title>
 
-    <!-- Main stylesheet lives beside this file -->
+    <!-- Same-folder stylesheet -->
     <link rel="stylesheet" href="style.css" />
 
-    <!-- Google Fonts – lightweight -->
+    <!-- Google font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
@@ -18,7 +18,7 @@
             <a href="/" class="logo">Shurendher</a>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="/"  class="active">Home</a></li>
+                    <li><a href="/" class="active">Home</a></li>
                     <li><a href="projects.html">Projects</a></li>
                     <li><a href="resume.html">Resume</a></li>
                     <li><a href="blog.html">Blog</a></li>
@@ -28,22 +28,22 @@
         </div>
     </header>
 
-    <!-- ===== HERO / INTRO ===== -->
+    <!-- ===== HERO ===== -->
     <section class="hero container">
-        <!-- replace the path when you have a real image -->
+        <!-- Replace with real image when ready -->
         <img src="assets/images/profile.jpg" alt="Portrait of Shurendher" class="hero-img" />
         <div class="hero-text">
             <h1>Hi, I’m Shurendher.</h1>
             <p>
-                Mechanical engineer turned <strong>robotics</strong> &amp; <strong>embedded-systems</strong>
-                developer. I design precise mechanisms, write control firmware, and build
-                autonomous behaviours — turning ideas into hardware that <em>moves</em>.
+                Mechanical engineer turned <strong>robotics</strong> &amp; <strong>embedded-systems</strong> developer.
+                I design precise mechanisms, write control firmware, and build autonomous behaviours —
+                turning ideas into hardware that <em>moves</em>.
             </p>
             <a class="btn" href="projects.html">View my work →</a>
         </div>
     </section>
 
-    <!-- ===== THREE-WAY SKILLS GRAPHIC ===== -->
+    <!-- ===== SKILLS ===== -->
     <section class="skills container">
         <h2>Where my worlds meet</h2>
         <div class="skill-grid">
@@ -62,7 +62,7 @@
         </div>
     </section>
 
-    <!-- ===== QUICK LINKS ===== -->
+    <!-- ===== CTA LINKS ===== -->
     <section class="cta container">
         <h2>Dive deeper</h2>
         <div class="cta-links">
@@ -86,9 +86,9 @@
 
     <!-- ===== MOBILE NAV SCRIPT ===== -->
     <script>
-      const burger   = document.querySelector('.burger');
-      const navLinks = document.querySelector('.nav-links');
-      burger.addEventListener('click', () => navLinks.classList.toggle('open'));
+        const burger   = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+        burger.addEventListener('click', () => navLinks.classList.toggle('open'));
     </script>
 </body>
 </html>
