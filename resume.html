@@ -36,49 +36,47 @@
     <!-- ===== EXPERIENCE CARDS ===== -->
     <section class="exp-grid">
 
-      <!-- Card 1 -->
+      <!-- Card: Meteora3D -->
       <article class="exp-card">
         <header>
-          <h3>Meteora3D – Cincinnati, OH</h3>
-          <span class="exp-dates">Apr&nbsp;2025 – Present</span>
+          <h3 class="exp-company">Meteora3D – Cincinnati, OH</h3>
+          <span class="exp-dates">Apr 2025 – Present</span>
         </header>
-        <h4>Mechanical & Embedded Systems Intern</h4>
+        <h4 class="exp-title">Mechanical &amp; Embedded Systems Intern</h4>
         <ul>
-          <li>Design &amp; prototype next-gen SLA 3-D printer mechanics.</li>
+          <li>Designed &amp; prototyped next-gen SLA 3-D printer mechanics.</li>
           <li>Brought up brushless-motor drivers via SPI; wrote calibration firmware.</li>
           <li>Co-ordinated CNC &amp; SLA prototype parts for rapid iteration.</li>
         </ul>
       </article>
 
-      <!-- Card 2 -->
+      <!-- Card: IASRL -->
       <article class="exp-card">
         <header>
-          <h3>IASRL, University of Cincinnati</h3>
+          <h3 class="exp-company">IASRL, University of Cincinnati</h3>
           <span class="exp-dates">Jan 2022 – Apr 2025</span>
         </header>
-        <h4>Graduate Researcher</h4>
+        <h4 class="exp-title">Graduate Researcher</h4>
         <ul>
           <li>Developed human-aware navigation algorithms in ROS 2.</li>
-          <li>Built hardware-in-loop test rigs and logged IMU / LiDAR data.</li>
+          <li>Built hardware-in-loop test rigs; logged IMU and LiDAR data.</li>
           <li>Authored publication on enhanced potential-field local planner.</li>
         </ul>
       </article>
 
-      <!-- Card 3 -->
+      <!-- Card: SmartX -->
       <article class="exp-card">
         <header>
-          <h3>SmartX Connected Products Pvt Ltd – India</h3>
+          <h3 class="exp-company">SmartX Connected Products Pvt Ltd – India</h3>
           <span class="exp-dates">Dec 2019 – Dec 2020</span>
         </header>
-        <h4>Mechanical Engineer</h4>
+        <h4 class="exp-title">Mechanical Engineer</h4>
         <ul>
           <li>Redesigned smart blood-transport device, cutting weight 47 %.</li>
           <li>Led DFMA reviews for injection-molded &amp; sheet-metal parts.</li>
           <li>Managed cross-functional team through prototype validation.</li>
         </ul>
       </article>
-
-      <!-- Add more <article> blocks as your history grows -->
 
     </section>
   </main>
@@ -88,9 +86,9 @@
   </footer>
 
   <script>
-    const burger   = document.querySelector('.burger');
-    const navLinks = document.querySelector('.nav-links');
-    burger.addEventListener('click', () => navLinks.classList.toggle('open'));
+    const burger = document.querySelector('.burger');
+    const nav    = document.querySelector('.nav-links');
+    burger.addEventListener('click', () => nav.classList.toggle('open'));
   </script>
 </body>
 </html>
