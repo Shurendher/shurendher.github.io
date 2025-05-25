@@ -91,20 +91,20 @@ body{
     font-size:0.95rem;
 }
 
-/* --- EXPERIENCE CARD HEADER WITH LOGO --- */
-.exp-top{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    flex-wrap:wrap;
+/* place logo in card’s top-right */
+.exp-card{
+    position:relative;            /* create containing context */
+    /* …existing styles (border, radius, etc.) already here… */
 }
 .exp-logo{
-    height:48px;          /* adjust as needed */
+    position:absolute;
+    top:1rem;                     /* distance from top edge */
+    right:1rem;                   /* distance from right edge */
+    height:48px;                  /* control size */
     width:auto;
-    margin-left:1rem;
-    margin-top:0.2rem;    /* tiny offset so it sits just below the date line */
     object-fit:contain;
 }
+
 
 /* ===== FOOTER ===== */
 .footer{background:#f1f1f1;padding:1rem 0;font-size:0.8rem;}
