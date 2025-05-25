@@ -89,7 +89,7 @@ body{
 }
 
 /* ===== LOGO inside card ===== */
-.exp-logo{
+/*.exp-logo{
     position:absolute;
     top:1rem;
     right:1rem;
@@ -99,7 +99,7 @@ body{
 
     object-fit:contain;   /* keeps aspect ratio */
     object-position:center;
-}
+}*/
 
 /* ===== FOOTER ===== */
 .footer{background:#f1f1f1;padding:1rem 0;font-size:0.8rem;}
