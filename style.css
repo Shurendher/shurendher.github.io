@@ -47,6 +47,7 @@ body{
 .card-link{background:var(--dark);color:#fff;padding:0.8rem 1.4rem;border-radius:var(--radius);text-decoration:none;font-weight:500;transition:background .2s;}
 .card-link:hover{background:var(--accent);}
 
+
 /* ===== FOOTER ===== */
 .footer{background:#f1f1f1;padding:1rem 0;font-size:0.8rem;}
 .footer-inner{display:flex;justify-content:space-between;align-items:center;}
@@ -63,3 +64,27 @@ body{
     .nav-links.open{display:flex;}
     .burger{display:block;}
 }
+
+/* ===== EXPERIENCE GRID ===== */
+.exp-grid{
+  display:grid;
+  gap:1.5rem;
+  margin-top:1rem;
+}
+.exp-card{
+  background:#fff;
+  border-radius:var(--radius);
+  padding:1.4rem 1.6rem;
+  box-shadow:0 2px 8px rgba(0,0,0,.05);
+}
+.exp-card header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:0.3rem;
+}
+.exp-card h3{font-size:1.1rem; font-weight:600;}
+.exp-dates{font-size:0.9rem; color:var(--gray);}
+.exp-card h4{font-size:1rem; color:var(--accent); margin-bottom:0.4rem;}
+.exp-card ul{margin-left:1.1rem; list-style:disc;}
+.exp-card li{margin-bottom:0.3rem; font-size:0.92rem;}
