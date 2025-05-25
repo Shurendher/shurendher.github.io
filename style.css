@@ -42,7 +42,7 @@ body{
 .skill-card h3{color:var(--accent);margin-bottom:0.4rem;font-size:1.1rem;}
 .skill-card p{font-size:0.9rem;color:var(--gray);}
 
-/* ===== CTA LINKS (home page) ===== */
+/* ===== CTA LINKS ===== */
 .cta{text-align:center;padding-bottom:4rem;}
 .cta h2{margin-bottom:1rem;}
 .cta-links{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;}
@@ -56,16 +56,11 @@ body{
     margin-top:1.5rem;
 }
 .exp-card{
+    position:relative;               /* for absolutely-positioned logo */
     background:#fff;
     border:2px solid var(--accent);
     border-radius:var(--radius);
     padding:1.6rem 1.8rem;
-}
-.exp-card header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    flex-wrap:wrap;
 }
 .exp-company{
     color:var(--accent);
@@ -75,6 +70,8 @@ body{
 .exp-dates{
     font-size:0.9rem;
     color:var(--gray);
+    display:block;
+    margin-bottom:0.3rem;
 }
 .exp-title{
     color:var(--accent);
@@ -91,12 +88,7 @@ body{
     font-size:0.95rem;
 }
 
-/* place logo in card’s top-right */
-.exp-card{
-    position:relative;            /* create containing context */
-    /* …existing styles (border, radius, etc.) already here… */
-}
-/* uniform 60×60 px square for every logo */
+/* ===== LOGO inside card ===== */
 .exp-logo{
     position:absolute;
     top:1rem;
@@ -105,10 +97,9 @@ body{
     width:60px;
     height:60px;
 
-    object-fit:contain;   /* scales & keeps aspect */
+    object-fit:contain;   /* keeps aspect ratio */
     object-position:center;
 }
-
 
 /* ===== FOOTER ===== */
 .footer{background:#f1f1f1;padding:1rem 0;font-size:0.8rem;}
