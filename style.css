@@ -96,13 +96,17 @@ body{
     position:relative;            /* create containing context */
     /* …existing styles (border, radius, etc.) already here… */
 }
+/* uniform 60×60 px square for every logo */
 .exp-logo{
     position:absolute;
-    top:1rem;                     /* distance from top edge */
-    right:1rem;                   /* distance from right edge */
-    height:48px;                  /* control size */
-    width:auto;
-    object-fit:contain;
+    top:1rem;
+    right:1rem;
+
+    width:60px;
+    height:60px;
+
+    object-fit:contain;   /* scales & keeps aspect */
+    object-position:center;
 }
 
 
