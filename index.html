@@ -1,96 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shurendher | Mechanical • Robotics • Embedded</title>
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experiences | Shurendher</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- ===== NAVBAR ===== -->
-    <header class="navbar">
-        <div class="container nav-inner">
-            <a href="/" class="logo">Shurendher</a>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="/"  class="active">Home</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="resume.html">Experience</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                </ul>
-                <button class="burger" aria-label="Toggle navigation">☰</button>
-            </nav>
-        </div>
-    </header>
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="/" class="logo">Shurendher</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="resume.html" class="active">Experience</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+        <button class="burger" aria-label="Toggle navigation">☰</button>
+      </nav>
+    </div>
+  </header>
 
-    <!-- ===== HERO ===== -->
-    <section class="hero container">
-        <img src="assets/images/profile.jpg" alt="Portrait of Shurendher" class="hero-img" />
-        <div class="hero-text">
-            <h1>Hi, I’m Shurendher.</h1>
-            <p>
-                Mechanical engineer turned <strong>robotics</strong> &amp; <strong>embedded-systems</strong> developer.
-                I design precise mechanisms, write control firmware, and build autonomous behaviours —
-                turning ideas into hardware that <em>moves</em>.
-            </p>
+  <main class="container" style="padding-top:3rem;">
+    <h1>Professional Experiences</h1>
 
-            <!-- Download résumé button right under the intro -->
-            <p style="margin:1rem 0;">
-                <a class="btn" href="assets/Shurendher_Resume.pdf" target="_blank" rel="noopener">
-                    Download PDF Résumé
-                </a>
-            </p>
+    <p style="margin:1.2rem 0;">
+      <a class="btn" href="assets/Shurendher_Resume.pdf" target="_blank" rel="noopener">
+        Download PDF Résumé
+      </a>
+    </p>
 
-            <a class="btn" href="projects.html">View my work →</a>
-        </div>
+    <section class="exp-grid">
+
+      <!-- ===== Meteora3D ===== -->
+      <article class="exp-card">
+        <!-- logo sitting absolutely in corner -->
+        <img class="exp-logo" src="assets/logos/meteora3d.png" alt="Meteora3D logo">
+        <h3 class="exp-company">Meteora3D – Cincinnati, OH</h3>
+        <span class="exp-dates">Apr 2025 – Present</span>
+
+        <h4 class="exp-title">Mechanical &amp; Embedded Systems Intern</h4>
+        <ul>
+          <li>Designed &amp; prototyped next-gen SLA 3-D printer mechanics.</li>
+          <li>Brought up brushless-motor drivers via SPI; wrote calibration firmware.</li>
+          <li>Co-ordinated CNC &amp; SLA prototype parts for rapid iteration.</li>
+        </ul>
+      </article>
+
+      <!-- ===== IASRL ===== -->
+      <article class="exp-card">
+        <img class="exp-logo" src="assets/logos/iasrl.png" alt="IASRL logo">
+        <h3 class="exp-company">IASRL, University of Cincinnati</h3>
+        <span class="exp-dates">Jan 2022 – Apr 2025</span>
+
+        <h4 class="exp-title">Graduate Researcher</h4>
+        <ul>
+          <li>Developed human-aware navigation algorithms in ROS 2.</li>
+          <li>Built hardware-in-loop test rigs; logged IMU &amp; LiDAR data.</li>
+          <li>Authored publication on enhanced potential-field local planner.</li>
+        </ul>
+      </article>
+
+      <!-- ===== SmartX ===== -->
+      <article class="exp-card">
+        <img class="exp-logo" src="assets/logos/smartx.png" alt="SmartX logo">
+        <h3 class="exp-company">SmartX Connected Products Pvt Ltd – India</h3>
+        <span class="exp-dates">Dec 2019 – Dec 2020</span>
+
+        <h4 class="exp-title">Mechanical Engineer</h4>
+        <ul>
+          <li>Redesigned smart blood-transport device, cutting weight 47 %.</li>
+          <li>Led DFMA reviews for injection-molded &amp; sheet-metal parts.</li>
+          <li>Managed cross-functional team through prototype validation.</li>
+        </ul>
+      </article>
+
     </section>
+  </main>
 
-    <!-- ===== SKILLS ===== -->
-    <section class="skills container">
-        <h2>Where my worlds meet</h2>
-        <div class="skill-grid">
-            <div class="skill-card">
-                <h3>Mechanical&nbsp;Design</h3>
-                <p>CAD • FEA • DFM • Rapid prototyping</p>
-            </div>
-            <div class="skill-card">
-                <h3>Robotics</h3>
-                <p>ROS&nbsp;2 • Navigation • Simulation • SLAM</p>
-            </div>
-            <div class="skill-card">
-                <h3>Embedded / Mechatronics</h3>
-                <p>C++ • SPI / I²C • Motor control • RTOS</p>
-            </div>
-        </div>
-    </section>
+  <footer class="footer">
+    <div class="container footer-inner"><p>© 2025 Shurendher</p></div>
+  </footer>
 
-    <!-- ===== CTA LINKS ===== -->
-    <section class="cta container">
-        <h2>Dive deeper</h2>
-        <div class="cta-links">
-            <a class="card-link" href="projects.html">Projects</a>
-            <a class="card-link" href="resume.html">Experience</a>
-            <a class="card-link" href="blog.html">Blog</a>
-        </div>
-    </section>
-
-    <!-- ===== FOOTER ===== -->
-    <footer class="footer">
-        <div class="container footer-inner">
-            <p>© 2025 Shurendher</p>
-            <div class="social">
-                <a href="https://www.linkedin.com/in/shurendher" target="_blank" rel="noopener">LinkedIn</a>
-                <a href="https://github.com/shurendher"       target="_blank" rel="noopener">GitHub</a>
-                <a href="https://behance.net/your-behance"     target="_blank" rel="noopener">Behance</a>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        const burger = document.querySelector('.burger');
-        const nav    = document.querySelector('.nav-links');
-        burger.addEventListener('click', () => nav.classList.toggle('open'));
-    </script>
+  <script>
+    const burger = document.querySelector('.burger');
+    const nav    = document.querySelector('.nav-links');
+    burger.addEventListener('click', () => nav.classList.toggle('open'));
+  </script>
 </body>
 </html>
