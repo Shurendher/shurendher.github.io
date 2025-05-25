@@ -91,6 +91,21 @@ body{
     font-size:0.95rem;
 }
 
+/* --- EXPERIENCE CARD HEADER WITH LOGO --- */
+.exp-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    flex-wrap:wrap;
+}
+.exp-logo{
+    height:48px;          /* adjust as needed */
+    width:auto;
+    margin-left:1rem;
+    margin-top:0.2rem;    /* tiny offset so it sits just below the date line */
+    object-fit:contain;
+}
+
 /* ===== FOOTER ===== */
 .footer{background:#f1f1f1;padding:1rem 0;font-size:0.8rem;}
 .footer-inner{display:flex;justify-content:space-between;align-items:center;}
