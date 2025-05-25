@@ -4,11 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shurendher | Mechanical • Robotics • Embedded</title>
-
-    <!-- Same-folder stylesheet -->
     <link rel="stylesheet" href="style.css" />
-
-    <!-- Google font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
@@ -18,9 +14,9 @@
             <a href="/" class="logo">Shurendher</a>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="/" class="active">Home</a></li>
+                    <li><a href="/"  class="active">Home</a></li>
                     <li><a href="projects.html">Projects</a></li>
-                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="resume.html">Experience</a></li>
                     <li><a href="blog.html">Blog</a></li>
                 </ul>
                 <button class="burger" aria-label="Toggle navigation">☰</button>
@@ -30,7 +26,6 @@
 
     <!-- ===== HERO ===== -->
     <section class="hero container">
-        <!-- Replace with real image when ready -->
         <img src="assets/images/profile.jpg" alt="Portrait of Shurendher" class="hero-img" />
         <div class="hero-text">
             <h1>Hi, I’m Shurendher.</h1>
@@ -39,6 +34,14 @@
                 I design precise mechanisms, write control firmware, and build autonomous behaviours —
                 turning ideas into hardware that <em>moves</em>.
             </p>
+
+            <!-- Download résumé button right under the intro -->
+            <p style="margin:1rem 0;">
+                <a class="btn" href="assets/Shurendher_Resume.pdf" target="_blank" rel="noopener">
+                    Download PDF Résumé
+                </a>
+            </p>
+
             <a class="btn" href="projects.html">View my work →</a>
         </div>
     </section>
@@ -67,7 +70,7 @@
         <h2>Dive deeper</h2>
         <div class="cta-links">
             <a class="card-link" href="projects.html">Projects</a>
-            <a class="card-link" href="resume.html">Résumé</a>
+            <a class="card-link" href="resume.html">Experience</a>
             <a class="card-link" href="blog.html">Blog</a>
         </div>
     </section>
@@ -78,17 +81,16 @@
             <p>© 2025 Shurendher</p>
             <div class="social">
                 <a href="https://www.linkedin.com/in/shurendher" target="_blank" rel="noopener">LinkedIn</a>
-                <a href="https://github.com/shurendher" target="_blank" rel="noopener">GitHub</a>
-                <a href="https://behance.net/your-behance" target="_blank" rel="noopener">Behance</a>
+                <a href="https://github.com/shurendher"       target="_blank" rel="noopener">GitHub</a>
+                <a href="https://behance.net/your-behance"     target="_blank" rel="noopener">Behance</a>
             </div>
         </div>
     </footer>
 
-    <!-- ===== MOBILE NAV SCRIPT ===== -->
     <script>
-        const burger   = document.querySelector('.burger');
-        const navLinks = document.querySelector('.nav-links');
-        burger.addEventListener('click', () => navLinks.classList.toggle('open'));
+        const burger = document.querySelector('.burger');
+        const nav    = document.querySelector('.nav-links');
+        burger.addEventListener('click', () => nav.classList.toggle('open'));
     </script>
 </body>
 </html>
