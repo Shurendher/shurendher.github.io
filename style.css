@@ -150,3 +150,43 @@ body{
     font-weight:500;
     white-space:nowrap;   /* keep single-word pill from breaking */
 }
+
+/* ===== CONTACT ===== */
+.contact{
+    text-align:center;
+    padding:4rem 0 5rem;
+}
+.contact h2{
+    font-size:1.7rem;
+    margin-bottom:0.6rem;
+}
+.contact-sub{
+    color:var(--gray);
+    margin-bottom:1.4rem;
+}
+.contact-links{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:0.8rem;
+}
+
+/* pill buttons reused */
+.pill{
+    display:inline-block;
+    padding:0.55rem 1.3rem;
+    border-radius:999px;
+    background:#f1f1f1;
+    color:var(--dark);
+    text-decoration:none;
+    font-weight:500;
+    transition:background .2s;
+}
+.pill:hover{ background:#e5e5e5; }
+
+/* accent pill for email */
+.pill-accent{
+    background:var(--accent);
+    color:#fff;
+}
+.pill-accent:hover{ background:#ff8a5c; }
