@@ -129,19 +129,34 @@ body{
     .exp-logo{margin-bottom:0.6rem;}
 }
 
-/* vertical bullet list inside skill-card */
+/* vertical list centred in card */
 .skill-list{
-    /* centre the list block horizontally
-       but left-align its own text */
-    display:inline-block;      /* shrink to fit */
-    text-align:left;
+    /* shrink to fit & centre it */
+    display:inline-flex;
+    flex-direction:column;
+    align-items:center;
+    gap:0.35rem;
 
-    list-style:disc;
-    margin-top:0.8rem;
-    padding-left:1.2rem;       /* indent bullet + text together */
+    list-style:none;      /* remove default bullet */
+    margin-top:0.9rem;
+    padding:0;            /* no extra indent */
 }
+
 .skill-list li{
+    position:relative;
+    padding-left:1rem;    /* space for custom bullet */
     font-size:0.95rem;
     color:var(--gray);
-    margin-bottom:0.35rem;
+}
+
+/* custom bullet */
+.skill-list li::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0.4em;            /* vertically centre dot */
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background:var(--gray);
 }
