@@ -129,34 +129,18 @@ body{
     .exp-logo{margin-bottom:0.6rem;}
 }
 
-/* vertical list centred in card */
+/* vertical list – bullet-less, centered */
 .skill-list{
-    /* shrink to fit & centre it */
     display:inline-flex;
     flex-direction:column;
     align-items:center;
     gap:0.35rem;
 
-    list-style:none;      /* remove default bullet */
+    list-style:none;   /* remove native bullets */
     margin-top:0.9rem;
-    padding:0;            /* no extra indent */
+    padding:0;
 }
-
 .skill-list li{
-    position:relative;
-    padding-left:1rem;    /* space for custom bullet */
     font-size:0.95rem;
     color:var(--gray);
-}
-
-/* custom bullet */
-.skill-list li::before{
-    content:"";
-    position:absolute;
-    left:0;
-    top:0.4em;            /* vertically centre dot */
-    width:6px;
-    height:6px;
-    border-radius:50%;
-    background:var(--gray);
 }
