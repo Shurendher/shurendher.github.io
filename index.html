@@ -51,37 +51,28 @@
       <h2>Where my worlds meet</h2>
       <div class="skill-grid">
         <!-- Mechanical -->
-        <div class="skill-card">
+        <a class="skill-card" href="mechanical.html">
           <h3>Mechanical Design</h3>
           <ul class="skill-list">
-            <li>CAD</li>
-            <li>FEA</li>
-            <li>DFM</li>
-            <li>Rapid prototyping</li>
+            <li>CAD</li><li>FEA</li><li>DFM</li><li>Rapid prototyping</li>
           </ul>
-        </div>
+        </a>
 
         <!-- Robotics -->
-        <div class="skill-card">
+        <a class="skill-card" href="robotics.html">
           <h3>Robotics</h3>
           <ul class="skill-list">
-            <li>ROS 2</li>
-            <li>Navigation</li>
-            <li>Simulation</li>
-            <li>SLAM</li>
+            <li>ROS 2</li><li>Navigation</li><li>Simulation</li><li>SLAM</li>
           </ul>
-        </div>
+        </a>
 
         <!-- Embedded -->
-        <div class="skill-card">
+        <a class="skill-card" href="embedded.html">
           <h3>Embedded / Mechatronics</h3>
           <ul class="skill-list">
-            <li>C++</li>
-            <li>SPI / I²C</li>
-            <li>Motor control</li>
-            <li>RTOS</li>
+            <li>C++</li><li>SPI / I²C</li><li>Motor control</li><li>RTOS</li>
           </ul>
-        </div>
+        </a>
       </div>
     </section>
 
@@ -102,8 +93,8 @@
 
       <div class="contact-links">
         <a class="pill pill-accent" href="mailto:sampatsr@mail.uc.edu">Email me</a>
-        <a class="pill" href="https://www.linkedin.com/in/shurensampath/" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="pill" href="https://github.com/shurendher" target="_blank" rel="noopener">GitHub</a>
+        <a class="pill" href="https://www.linkedin.com/in/shurendher" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="pill" href="https://behance.net/your-behance"      target="_blank" rel="noopener">Behance</a>
       </div>
     </section>
   </main>
@@ -112,13 +103,18 @@
   <footer class="footer">
     <div class="container footer-inner">
       <p>© 2025 Shurendher</p>
+      <div class="social">
+        <a href="https://www.linkedin.com/in/shurendher" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/shurendher"          target="_blank" rel="noopener">GitHub</a>
+        <a href="https://behance.net/your-behance"       target="_blank" rel="noopener">Behance</a>
+      </div>
     </div>
   </footer>
 
   <script>
     const burger = document.querySelector('.burger');
-    const navLinks = document.querySelector('.nav-links');
-    burger.addEventListener('click', () => navLinks.classList.toggle('open'));
+    const nav    = document.querySelector('.nav-links');
+    burger.addEventListener('click', () => nav.classList.toggle('open'));
   </script>
 </body>
 </html>
