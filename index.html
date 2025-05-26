@@ -24,75 +24,89 @@
     </div>
   </header>
 
-  <!-- ===== HERO ===== -->
-  <section class="hero container">
-    <img src="assets/images/profile.jpg" alt="Portrait of Shurendher" class="hero-img" />
-    <div class="hero-text">
-      <h1>Hello There! I’m Shurendher.</h1>
-      <p>
-        Mechanical engineer turned <strong>robotics</strong> &amp; <strong>embedded-systems</strong> developer.
-        I design precise mechanisms, write control firmware, and build autonomous behaviours —
-        turning ideas into hardware that <em>moves</em>.
-      </p>
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero container">
+      <img src="assets/images/profile.jpg" alt="Portrait of Shurendher" class="hero-img" />
+      <div class="hero-text">
+        <h1>Hello There! I’m Shurendher.</h1>
+        <p>
+          Mechanical engineer turned <strong>robotics</strong> &amp; <strong>embedded-systems</strong> developer.
+          I design precise mechanisms, write control firmware, and build autonomous
+          behaviours — turning ideas into hardware that <em>moves</em>.
+        </p>
 
-      <p style="margin:1rem 0;">
-        <a class="btn" href="assets/Shurendher_Resume.pdf" target="_blank" rel="noopener">
-          Download PDF Résumé
-        </a>
-      </p>
+        <p style="margin:1rem 0;">
+          <a class="btn" href="assets/Shurendher_Resume.pdf" target="_blank" rel="noopener">
+            Download PDF Résumé
+          </a>
+        </p>
 
-      <a class="btn" href="projects.html">View my work →</a>
-    </div>
-  </section>
-
-  <!-- ===== SKILLS ===== -->
-  <section class="skills container">
-    <h2>Where my worlds meet</h2>
-    <div class="skill-grid">
-      <!-- Mechanical -->
-      <div class="skill-card">
-        <h3>Mechanical Design</h3>
-        <ul class="skill-list">
-          <li>CAD</li>
-          <li>FEA</li>
-          <li>DFM</li>
-          <li>Rapid prototyping</li>
-        </ul>
+        <a class="btn" href="projects.html">View my work →</a>
       </div>
+    </section>
 
-      <!-- Robotics -->
-      <div class="skill-card">
-        <h3>Robotics</h3>
-        <ul class="skill-list">
-          <li>ROS 2</li>
-          <li>Navigation</li>
-          <li>Simulation</li>
-          <li>SLAM</li>
-        </ul>
+    <!-- ===== SKILLS ===== -->
+    <section class="skills container">
+      <h2>Where my worlds meet</h2>
+      <div class="skill-grid">
+        <!-- Mechanical -->
+        <div class="skill-card">
+          <h3>Mechanical Design</h3>
+          <ul class="skill-list">
+            <li>CAD</li>
+            <li>FEA</li>
+            <li>DFM</li>
+            <li>Rapid prototyping</li>
+          </ul>
+        </div>
+
+        <!-- Robotics -->
+        <div class="skill-card">
+          <h3>Robotics</h3>
+          <ul class="skill-list">
+            <li>ROS 2</li>
+            <li>Navigation</li>
+            <li>Simulation</li>
+            <li>SLAM</li>
+          </ul>
+        </div>
+
+        <!-- Embedded -->
+        <div class="skill-card">
+          <h3>Embedded / Mechatronics</h3>
+          <ul class="skill-list">
+            <li>C++</li>
+            <li>SPI / I²C</li>
+            <li>Motor control</li>
+            <li>RTOS</li>
+          </ul>
+        </div>
       </div>
+    </section>
 
-      <!-- Embedded -->
-      <div class="skill-card">
-        <h3>Embedded / Mechatronics</h3>
-        <ul class="skill-list">
-          <li>C++</li>
-          <li>SPI / I²C</li>
-          <li>Motor control</li>
-          <li>RTOS</li>
-        </ul>
+    <!-- ===== CTA ===== -->
+    <section class="cta container">
+      <h2>Dive deeper</h2>
+      <div class="cta-links">
+        <a class="card-link" href="projects.html">Projects</a>
+        <a class="card-link" href="resume.html">Experience</a>
+        <a class="card-link" href="blog.html">Blog</a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===== CTA ===== -->
-  <section class="cta container">
-    <h2>Dive deeper</h2>
-    <div class="cta-links">
-      <a class="card-link" href="projects.html">Projects</a>
-      <a class="card-link" href="resume.html">Experience</a>
-      <a class="card-link" href="blog.html">Blog</a>
-    </div>
-  </section>
+    <!-- ===== CONTACT ===== -->
+    <section class="contact container">
+      <h2>Let’s talk</h2>
+      <p class="contact-sub">Open to collaboration, freelance design, or a quick tech chat.</p>
+
+      <div class="contact-links">
+        <a class="pill pill-accent" href="mailto:sampatsr@mail.uc.edu">Email me</a>
+        <a class="pill" href="https://www.linkedin.com/in/shurendher" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="pill" href="https://github.com/shurendher" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </section>
+  </main>
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
@@ -101,27 +115,14 @@
       <div class="social">
         <a href="https://www.linkedin.com/in/shurendher" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://github.com/shurendher" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://behance.net/your-behance" target="_blank" rel="noopener">Behance</a>
       </div>
     </div>
   </footer>
 
   <script>
     const burger = document.querySelector('.burger');
-    const nav    = document.querySelector('.nav-links');
-    burger.addEventListener('click', () => nav.classList.toggle('open'));
+    const navLinks = document.querySelector('.nav-links');
+    burger.addEventListener('click', () => navLinks.classList.toggle('open'));
   </script>
 </body>
 </html>
-
-<!-- ===== CONTACT ===== -->
-<section class="contact container">
-  <h2>Let’s talk</h2>
-  <p class="contact-sub">Open to collaboration, freelance design, or a quick tech chat.</p>
-
-  <div class="contact-links">
-    <a class="pill pill-accent" href="mailto:sampatsr@mail.uc.edu"   >Email me</a>
-    <a class="pill"             href="https://www.linkedin.com/in/shurendher" target="_blank" rel="noopener">LinkedIn</a>
-    <a class="pill"             href="https://github.com/shurendher"         target="_blank" rel="noopener">GitHub</a>
-  </div>
-</section>
