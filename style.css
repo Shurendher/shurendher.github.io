@@ -131,13 +131,17 @@ body{
 
 /* vertical bullet list inside skill-card */
 .skill-list{
+    /* centre the list block horizontally
+       but left-align its own text */
+    display:inline-block;      /* shrink to fit */
+    text-align:left;
+
     list-style:disc;
-    margin-left:1.4rem;
-    margin-top:0.6rem;
-    padding-left:0;
+    margin-top:0.8rem;
+    padding-left:1.2rem;       /* indent bullet + text together */
 }
 .skill-list li{
     font-size:0.95rem;
     color:var(--gray);
-    margin-bottom:0.3rem;
+    margin-bottom:0.35rem;
 }
