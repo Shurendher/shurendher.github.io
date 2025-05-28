@@ -129,3 +129,48 @@ body{
   .burger{display:block;}
   .skill-card{padding:1.4rem 1rem;}
 }
+
+/* ===== PROJECT GRID ===== */
+.proj-grid{
+  display:grid;
+  gap:2rem;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  margin-bottom:4rem;
+}
+.proj-card{
+  background:#fff;
+  border-radius:var(--radius);
+  box-shadow:0 2px 8px rgba(0,0,0,.05);
+  overflow:hidden;
+  transition:transform .15s, box-shadow .15s;
+}
+.proj-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 6px 14px rgba(0,0,0,.07);
+}
+.proj-card img{
+  width:100%; aspect-ratio:3/2; object-fit:cover;
+}
+.proj-card h3{
+  color:var(--accent);
+  font-size:1.1rem;
+  margin:0.8rem 1rem 0.4rem;
+}
+.proj-card ul{
+  margin:0 1.3rem 0.8rem;
+  padding-left:1.1rem;
+  list-style:disc;
+}
+.proj-card li{
+  font-size:0.9rem;
+  color:var(--gray);
+  margin-bottom:0.25rem;
+}
+.proj-link{
+  display:inline-block;
+  margin:0 1.3rem 1.3rem;
+  font-size:0.9rem;
+  color:var(--accent);
+  text-decoration:none;
+}
+.proj-link:hover{ text-decoration:underline; }
