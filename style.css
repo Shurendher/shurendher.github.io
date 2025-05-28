@@ -130,7 +130,7 @@ body{
   .skill-card{padding:1.4rem 1rem;}
 }
 
-/* ===== PROJECT GRID ===== */
+/* ===== PROJECT GRID (mechanical / robotics / embedded pages) ===== */
 .proj-grid{
   display:grid;
   gap:2rem;
@@ -142,14 +142,17 @@ body{
   border-radius:var(--radius);
   box-shadow:0 2px 8px rgba(0,0,0,.05);
   overflow:hidden;
-  transition:transform .15s, box-shadow .15s;
+  transition:transform .15s,box-shadow .15s;
+  text-decoration:none;
 }
 .proj-card:hover{
   transform:translateY(-4px);
   box-shadow:0 6px 14px rgba(0,0,0,.07);
 }
 .proj-card img{
-  width:100%; aspect-ratio:3/2; object-fit:cover;
+  width:100%;
+  aspect-ratio:3/2;   /* keeps all thumbnails same height */
+  object-fit:cover;
 }
 .proj-card h3{
   color:var(--accent);
@@ -173,4 +176,4 @@ body{
   color:var(--accent);
   text-decoration:none;
 }
-.proj-link:hover{ text-decoration:underline; }
+.proj-link:hover{text-decoration:underline;}
