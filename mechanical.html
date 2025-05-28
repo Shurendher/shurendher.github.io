@@ -1,33 +1,82 @@
-<section class="proj-grid">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mechanical Projects | Shurendher</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ==== NAVBAR (same across pages) ==== -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="/" class="logo">Shurendher</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="resume.html">Experience</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-  <!-- card 1 -->
-  <article class="proj-card">
-    <a href="project-gearbox.html">
-      <img src="assets/projects/gearbox_hero.jpg" alt="Planetary gearbox FEA" />
-    </a>
-    <h3>Planetary Gearbox FEA</h3>
-    <ul>
-      <li>Modal &amp; static analysis in Abaqus</li>
-      <li>Weight down 14 %, safety factor &gt; 2.1</li>
-      <li>Iterated with 3-D-printed prototypes</li>
-    </ul>
-    <a class="proj-link" href="project-gearbox.html">Case study →</a>
-  </article>
+  <main class="container" style="padding-top:3rem;">
+    <h1>Mechanical Design Projects</h1>
+    <p style="margin-bottom:2rem;">A selection of CAD, FEA, and prototyping work. Click any card for the full case study.</p>
 
-  <!-- card 2 -->
-  <article class="proj-card">
-    <a href="#">
-      <img src="assets/projects/propeller_scan.jpg" alt="Digitised propeller redesign" />
-    </a>
-    <h3>Reverse-Engineered Propeller</h3>
-    <ul>
-      <li>Point-cloud capture → CATIA surface</li>
-      <li>CFD predicted 9 % efficiency gain</li>
-      <li>Single-setup CNC tool-path</li>
-    </ul>
-    <a class="proj-link" href="#">Case study →</a>
-  </article>
+    <!-- ===== PROJECT GRID ===== -->
+    <section class="proj-grid">
 
-  <!-- …more cards… -->
+      <!-- card 1 -->
+      <article class="proj-card">
+        <a href="project-gearbox.html">
+          <img src="assets/projects/gearbox_hero.jpg" alt="Planetary gearbox FEA" />
+        </a>
+        <h3>Planetary Gearbox FEA</h3>
+        <ul>
+          <li>Modal &amp; static analysis in Abaqus</li>
+          <li>Weight down 14 %, safety factor &gt; 2 .1</li>
+          <li>Iterated with 3-D-printed prototypes</li>
+        </ul>
+        <a class="proj-link" href="project-gearbox.html">Case study →</a>
+      </article>
 
-</section>
+      <!-- card 2 -->
+      <article class="proj-card">
+        <a href="#">
+          <img src="assets/projects/propeller_scan.jpg" alt="Digitised propeller redesign" />
+        </a>
+        <h3>Reverse-Engineered Propeller</h3>
+        <ul>
+          <li>Point-cloud capture → CATIA surfaces</li>
+          <li>CFD predicted 9 % efficiency gain</li>
+          <li>Single-setup CNC tool-path</li>
+        </ul>
+        <a class="proj-link" href="#">Case study →</a>
+      </article>
+
+      <!-- card 3 -->
+      <article class="proj-card">
+        <a href="#">
+          <img src="assets/projects/heat_sink.jpg" alt="Lightweight heat-sink fins" />
+        </a>
+        <h3>Lightweight Heat-Sink Fins</h3>
+        <ul>
+          <li>Topology-optimised in Ansys</li>
+          <li>40 % mass reduction, same thermal ΔT</li>
+          <li>Design for die-casting</li>
+        </ul>
+        <a class="proj-link" href="#">Case study →</a>
+      </article>
+
+      <!-- add more cards as needed -->
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner"><p>© 2025 Shurendher</p></div>
+  </footer>
+</body>
+</html>
