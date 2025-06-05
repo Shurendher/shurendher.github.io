@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- ==== NAVBAR (same across pages) ==== -->
+  <!-- ==== NAVBAR ==== -->
   <header class="navbar">
     <div class="container nav-inner">
       <a href="/" class="logo">Shurendher</a>
@@ -24,100 +24,45 @@
 
   <main class="container" style="padding-top:3rem;">
     <h1>Mechanical Design Projects</h1>
-    <p style="margin-bottom:2rem;">A selection of CAD, FEA, and prototyping work. Click any card for the full case study.</p>
+    <p style="margin-bottom:2rem;">Click any tile to open the full case study.</p>
 
-    <!-- ===== PROJECT GRID ===== -->
-    <section class="proj-grid">
+    <!-- ===== IMAGE-ONLY PROJECT GRID ===== -->
+    <section class="proj-grid img-only">
 
-      <!-- card 1 -->
-      <article class="proj-card">
-        <a href="project-gearbox.html">
-          <img src="assets/projects/gearbox_hero.jpg" alt="Planetary gearbox FEA" />
-        </a>
-        <h3>Planetary Gearbox FEA</h3>
-        <ul>
-          <li>Modal &amp; static analysis in Abaqus</li>
-          <li>Weight down 14 %, safety factor &gt; 2 .1</li>
-          <li>Iterated with 3-D-printed prototypes</li>
-        </ul>
-        <a class="proj-link" href="project-gearbox.html">Case study →</a>
-      </article>
+      <a class="proj-card-img" href="project-gearbox.html">
+        <img src="assets/projects/gearbox_hero.jpg" alt="Planetary gearbox FEA">
+        <span class="proj-title">Planetary Gearbox FEA</span>
+      </a>
 
-      <!-- card 2 -->
-      <article class="proj-card">
-        <a href="#">
-          <img src="assets/projects/propeller_reverse_engineer/Reverse Engineering - Copy.png" alt="Digitised propeller redesign" />
-        </a>
-        <h3>Reverse-Engineered Propeller</h3>
-        <ul>
-          <li>Point-cloud capture → CATIA surfaces</li>
-          <li>CFD predicted 9 % efficiency gain</li>
-          <li>Single-setup CNC tool-path</li>
-        </ul>
-        <a class="proj-link" href="#">Case study →</a>
-      </article>
+      <a class="proj-card-img" href="project-propeller.html">
+        <img src="assets/projects/propeller_reverse_engineer/Reverse Engineering - Copy.png"
+             alt="Reverse-engineered propeller">
+        <span class="proj-title">Reverse-Engineered Propeller</span>
+      </a>
 
-      <!-- card 3 -->
-      <article class="proj-card">
-        <a href="#">
-          <img src="assets/projects/slotted_fins/ThermalOptimization.jpg" alt="Lightweight heat-sink fins" />
-        </a>
-        <h3>Thermal Optimization of Fin Structure - Slotted Fins</h3>
-        <ul>
-          <li>Topology-optimised in Ansys</li>
-          <li>40 % mass reduction, same thermal ΔT</li>
-          <li>Design for die-casting</li>
-        </ul>
-        <a class="proj-link" href="#">Case study →</a>
-      </article>
+      <a class="proj-card-img" href="project-fins.html">
+        <img src="assets/projects/slotted_fins/ThermalOptimization.jpg"
+             alt="Thermal optimisation of slotted fins">
+        <span class="proj-title">Slotted Heat-Sink Fins</span>
+      </a>
 
-      <!-- card 4 -->
-      <article class="proj-card">
-        <a href="#">
-          <img src="assets/projects/pixie/Pixie 1.jpg" alt="3 DOF Manipulator" />
-        </a>
-        <h3>Pixie</h3>
-        <ul>
-          <li>Topology-optimised in Ansys</li>
-          <li>40 % mass reduction, same thermal ΔT</li>
-          <li>Design for die-casting</li>
-        </ul>
-        <a class="proj-link" href="#">Case study →</a>
-      </article>
+      <a class="proj-card-img" href="project-pixie.html">
+        <img src="assets/projects/pixie/Pixie 1.jpg" alt="Pixie 3-DOF manipulator">
+        <span class="proj-title">Pixie Manipulator</span>
+      </a>
 
-      <!-- card 5 -->
-      <article class="proj-card">
-        <a href="#">
-          <img src="assets/projects/pneunets/SoftRoboticGripper2.jpg" alt="Parametric Gear design" />
-        </a>
-        <h3>Soft Robotics - Pneunets</h3>
-        <ul>
-          <li>Topology-optimised in Ansys</li>
-          <li>40 % mass reduction, same thermal ΔT</li>
-          <li>Design for die-casting</li>
-        </ul>
-        <a class="proj-link" href="#">Case study →</a>
-      </article>
+      <a class="proj-card-img" href="project-soft-robotics.html">
+        <img src="assets/projects/pneunets/SoftRoboticGripper2.jpg"
+             alt="Soft robotics PneuNets gripper">
+        <span class="proj-title">Soft Robotics – PneuNets</span>
+      </a>
 
-      <!--Card 6 -->
-      <!-- Cycloidal Gear card -->
-      <article class="proj-card">
-        <a href="cycloidal-gear.html">
-          <img src="assets/projects/cycloidal_gearbox/Cycloidal_Drive_ISO.png"
-               alt="Single-stage cycloidal gear render" />
-        </a>
-      
-        <h3>Single-Stage Cycloidal Gear</h3>
-        <ul>
-          <li>92 % efficiency @ 200 N·m</li>
-          <li>Designed in CATIA; analysed in Abaqus</li>
-          <li>Zero-backlash, compact (35 mm stack)</li>
-          <li>3-axis machined steel + needle bearings</li>
-        </ul>
-        <a class="proj-link" href="cycloidal-gear.html">Case study →</a>
-      </article>
+      <a class="proj-card-img" href="cycloidal-gear.html">
+        <img src="assets/projects/cycloidal_gearbox/Cycloidal_Drive_ISO.png"
+             alt="Single-stage cycloidal gear drive">
+        <span class="proj-title">Single-Stage Cycloidal Gear</span>
+      </a>
 
-      <!-- add more cards as needed -->
     </section>
   </main>
 
