@@ -15,7 +15,11 @@ body{
   background:var(--light);
   line-height:1.6;
 }
-.container{width:90%;max-width:1000px;margin:0 auto;}
+.container{
+  width:94%;
+  max-width:1400px;   /* ↑ from 1000 */
+  margin:0 auto;
+}
 
 /* ===== NAVBAR ===== */
 .navbar{background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.05);}
@@ -40,7 +44,7 @@ body{
 .proj-grid{
   display:grid;
   gap:2rem;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
   margin-bottom:4rem;
 }
 
