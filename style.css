@@ -120,6 +120,11 @@ body {
 }
 
 /* ===== SKILLS SECTION ===== */
+.skills {
+  text-align: center;
+  margin-top: 3rem;
+}
+
 .skill-grid {
   display: flex;
   justify-content: center;
