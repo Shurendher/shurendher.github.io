@@ -212,9 +212,13 @@ body {
 
 .proj-card img {
   width: 100%;
+  height: 200px;                 /* uniform height */
+  object-fit: cover;            /* crop & center */
   border-radius: var(--radius);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
 }
+
 
 .proj-card a {
   display: block;
