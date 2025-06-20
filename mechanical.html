@@ -29,27 +29,28 @@
       display: block;
     }
 
-    .proj-card:hover img {
-      transform: scale(1.05);
-      filter: brightness(0.4);
-    }
-
     .proj-card a {
       position: absolute;
       bottom: 1rem;
       left: 50%;
       transform: translateX(-50%);
-      color: #000;
+      color: #fff;
       font-weight: 700;
       text-decoration: none;
       font-size: 1.1rem;
       z-index: 2;
-      transition: all 0.3s ease;
       text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .proj-card:hover img {
+      transform: scale(1.05);
+      filter: brightness(0.4);
     }
 
     .proj-card:hover a {
-      color: #fff;
+      opacity: 1;
     }
   </style>
 </head>
