@@ -3,71 +3,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mechanical Projects | Shurendher</title>
+  <title>Mechanical Design Projects</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <!-- ==== NAVBAR ==== -->
+  <!-- ===== NAVBAR ===== -->
   <header class="navbar">
     <div class="container nav-inner">
-      <a href="/" class="logo">Shurendher</a>
+      <a href="index.html" class="logo">Shurendher</a>
       <nav>
         <ul class="nav-links">
-          <li><a href="/">Home</a></li>
-          <li><a href="projects.html">Projects</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
           <li><a href="resume.html">Experience</a></li>
           <li><a href="blog.html">Blog</a></li>
         </ul>
+        <button class="burger" aria-label="Toggle navigation">☰</button>
       </nav>
     </div>
   </header>
 
-  <main class="container" style="padding-top:3rem;">
-    <h1>Mechanical Design Projects</h1>
-    <p style="margin-bottom:2rem;">Click any tile to open the full case study.</p>
+  <!-- ===== PROJECT GRID ===== -->
+  <main>
+    <section class="container">
+      <h1>Mechanical Design Projects</h1>
+      <p class="subheading">Click any project to view details</p>
 
-    <!-- ===== IMAGE-ONLY PROJECT GRID ===== -->
-    <section class="proj-grid img-only">
+      <div class="proj-grid">
+        <div class="proj-card">
+          <img src="assets/images/project1.jpg" alt="Slotted Fin Optimization" />
+          <a href="#">Slotted Fin Optimization</a>
+        </div>
 
-      <a class="proj-card-img" href="project-gearbox.html">
-        <img src="assets/projects/gearbox_hero.jpg" alt="Planetary gearbox FEA">
-        <span class="proj-title">Planetary Gearbox FEA</span>
-      </a>
+        <div class="proj-card">
+          <img src="assets/images/project2.jpg" alt="Cycloidal Gearbox Design" />
+          <a href="#">Cycloidal Gearbox Design</a>
+        </div>
 
-      <a class="proj-card-img" href="project-propeller.html">
-        <img src="assets/projects/propeller_reverse_engineer/Reverse Engineering - Copy.png"
-             alt="Reverse-engineered propeller">
-        <span class="proj-title">Reverse-Engineered Propeller</span>
-      </a>
+        <div class="proj-card">
+          <img src="assets/images/project3.jpg" alt="Manipulator Fixture" />
+          <a href="#">Manipulator Fixture</a>
+        </div>
 
-      <a class="proj-card-img" href="project-fins.html">
-        <img src="assets/projects/slotted_fins/ThermalOptimization.jpg"
-             alt="Thermal optimisation of slotted fins">
-        <span class="proj-title">Slotted Heat-Sink Fins</span>
-      </a>
+        <div class="proj-card">
+          <img src="assets/images/project4.jpg" alt="FEA Stress Test" />
+          <a href="#">FEA Stress Test</a>
+        </div>
 
-      <a class="proj-card-img" href="project-pixie.html">
-        <img src="assets/projects/pixie/Pixie 1.jpg" alt="Pixie 3-DOF manipulator">
-        <span class="proj-title">Pixie Manipulator</span>
-      </a>
-
-      <a class="proj-card-img" href="project-soft-robotics.html">
-        <img src="assets/projects/pneunets/SoftRoboticGripper2.jpg"
-             alt="Soft robotics PneuNets gripper">
-        <span class="proj-title">Soft Robotics – PneuNets</span>
-      </a>
-
-      <a class="proj-card-img" href="cycloidal-gear.html">
-        <img src="assets/projects/cycloidal_gearbox/Cycloidal_Drive_ISO.png"
-             alt="Single-stage cycloidal gear drive">
-        <span class="proj-title">Single-Stage Cycloidal Gear</span>
-      </a>
-
+        <!-- Add more proj-card blocks here as needed -->
+      </div>
     </section>
   </main>
 
+  <!-- ===== FOOTER ===== -->
   <footer class="footer">
-    <div class="container footer-inner"><p>© 2025 Shurendher</p></div>
+    <div class="container footer-inner">
+      <p>© 2025 Shurendher</p>
+      <div class="social">
+        <a href="https://www.linkedin.com/in/shurendher" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/shurendher" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://behance.net/your-behance" target="_blank" rel="noopener">Behance</a>
+      </div>
+    </div>
   </footer>
+
+  <script>
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    burger.addEventListener('click', () => nav.classList.toggle('open'));
+  </script>
 </body>
 </html>
