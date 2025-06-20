@@ -198,6 +198,37 @@ body {
   color: #fff;
 }
 
+/* ===== PROJECT PAGE GRID ===== */
+.proj-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin: 2rem 0 4rem;
+}
+
+.proj-card {
+  text-align: center;
+}
+
+.proj-card img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.proj-card a {
+  display: block;
+  margin-top: 0.6rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.proj-card a:hover {
+  text-decoration: underline;
+}
+
+
 /* ===== CONTACT SECTION ===== */
 .contact {
   margin: 4rem 0 2rem;
