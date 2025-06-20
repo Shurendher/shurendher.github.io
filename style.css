@@ -121,40 +121,39 @@ body {
 
 /* ===== SKILLS SECTION ===== */
 .skill-grid {
-  display: grid;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  margin: 2rem 0;
+  margin: 2.5rem 0;
 }
 
 .skill-card {
-  background: #fff;
-  padding: 1.2rem;
+  background: var(--accent);
+  padding: 1.5rem 2rem;
   border-radius: var(--radius);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   text-decoration: none;
-  transition: transform 0.15s, box-shadow 0.15s;
-  color: inherit;
+  font-weight: 700;
+  color: white;
+  font-size: 1.15rem;
+  transition: all 0.2s ease;
+  text-align: center;
+  min-width: 240px;
+  border: 2px solid var(--accent);
 }
 
 .skill-card:hover {
-  transform: translateY(-4px);
+  background: white;
+  color: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-3px);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.07);
 }
 
 .skill-card h3 {
-  margin-bottom: 0.6rem;
-  color: var(--accent);
-}
-
-.skill-list {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem 1rem;
-  font-size: 0.95rem;
-  color: var(--gray);
+  margin: 0;
+  font-size: 1.25rem;
 }
 
 /* ===== PROJECT GRID ===== */
