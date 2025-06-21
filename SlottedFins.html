@@ -60,7 +60,7 @@
       <nav>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="pubproj.html">Publications & Active Projects</a></li>
+          <li><a href="projects.html">Projects</a></li>
           <li><a href="resume.html">Experience</a></li>
           <li><a href="blog.html">Blog</a></li>
         </ul>
@@ -72,41 +72,57 @@
     <section class="hero">
       <img src="assets/projects/slotted_fins/ThermalOptimization.jpg" alt="Thermal Optimization Flowchart" />
       <h1>Thermal Optimization of Fins</h1>
-      <p>Enhancing heat transfer with reduced material through design iterations.</p>
+      <p>Enhancing heat dissipation with reduced material mass through geometric design refinement and simulation.</p>
     </section>
 
     <section class="content-section">
       <h2>Overview</h2>
       <p>
-        This project investigates the trade-off between heat transfer performance and material usage in fin-like structures.
-        Inspired by existing geometries from literature, the designs were recreated, simulated, and evaluated using FEA tools.
+        In modern thermal systems, fins are used to increase the heat dissipation area of a surface. However, the
+        material and space constraints often demand designs that achieve better performance with minimal mass.
+        This project investigates and compares different fin geometries — primarily rectangular and slotted configurations — to find the optimal design balancing heat transfer and material usage.
       </p>
 
-      <h2>Design and Simulation Process</h2>
+      <h2>Objective</h2>
       <p>
-        The workflow began with extracting reference geometries from research papers. These were modeled in CAD, meshed in ANSYS, and simulated for heat transfer.
-        Mass and temperature gradients were recorded to identify optimal designs.
+        To evaluate and compare the performance of various fin geometries based on their temperature profiles,
+        heat flux, and mass, using finite element analysis in ANSYS. The goal was to identify which slotted designs
+        offer superior thermal performance while maintaining structural simplicity.
       </p>
+
+      <h2>Methodology</h2>
+      <ul>
+        <li>Modeled five geometries: one rectangular baseline and four slotted variations (circular, elliptical, square, hexagonal).</li>
+        <li>All designs were created using SolidWorks with consistent dimensions and boundary conditions.</li>
+        <li>Imported into ANSYS Workbench for meshing and steady-state thermal simulation.</li>
+        <li>Conducted analysis under constant heat input (1 W) and convective boundary conditions.</li>
+        <li>Compared results based on maximum temperature, heat flux, and mass.</li>
+      </ul>
+
       <div class="image-gallery">
-        <img src="assets/projects/slotted_fins/modeling.png" alt="CAD Modeling" />
-        <img src="assets/projects/slotted_fins/mesh.png" alt="Meshing in ANSYS" />
-        <img src="assets/projects/slotted_fins/result.png" alt="Simulation Result" />
+        <img src="assets/projects/slotted_fins/modeling.png" alt="CAD Models" />
+        <img src="assets/projects/slotted_fins/mesh.png" alt="ANSYS Meshing" />
+        <img src="assets/projects/slotted_fins/result.png" alt="Temperature Results" />
       </div>
 
-      <h2>Outcome</h2>
-      <p>
-        Several fin configurations showed increased heat dissipation with a simultaneous reduction in material. The best design achieved <strong>20% improved transfer rate</strong> with <strong>15% less mass</strong> compared to the baseline geometry.
-      </p>
+      <h2>Key Results</h2>
+      <ul>
+        <li>The circular slotted fin showed the lowest temperature (25.32°C) and highest heat flux.</li>
+        <li>Mass reduction achieved with slotted designs ranged from 8–12% compared to the rectangular fin.</li>
+        <li>All slotted designs performed better thermally due to increased surface area and airflow.</li>
+        <li>Circular slotted design identified as most optimal due to its performance and ease of manufacture.</li>
+      </ul>
 
       <h2>Tools Used</h2>
       <ul>
-        <li>SolidWorks – CAD modeling</li>
-        <li>ANSYS – FEA simulation (steady-state thermal)</li>
-        <li>MATLAB – Data analysis and post-processing</li>
+        <li>SolidWorks – CAD Modeling</li>
+        <li>ANSYS Workbench – Meshing and Thermal Simulation</li>
+        <li>Excel – Tabulation and comparison of results</li>
       </ul>
 
       <div class="cta">
         <a href="assets/documents/thermal_fins_presentation.pdf" target="_blank">📎 Download Presentation</a>
+        <a href="assets/documents/Project_report_full.pdf" target="_blank">📄 View Full Report</a>
         <a href="projects.html">⬅ Back to Projects</a>
       </div>
     </section>
