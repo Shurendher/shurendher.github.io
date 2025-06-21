@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thermal Optimization of Fins</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+    .hero img {
+      width: 80%;
+      max-width: 800px;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+    .content-section {
+      padding: 2rem 1rem;
+      max-width: 900px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+    .content-section h2 {
+      margin-top: 2rem;
+      color: #333;
+    }
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin: 2rem 0;
+    }
+    .image-gallery img {
+      width: 250px;
+      border-radius: 8px;
+    }
+    .cta {
+      text-align: center;
+      margin-top: 3rem;
+    }
+    .cta a {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #111;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">Shurendher</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pubproj.html">Publications & Active Projects</a></li>
+          <li><a href="resume.html">Experience</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img src="assets/projects/slotted_fins/ThermalOptimization.jpg" alt="Thermal Optimization Flowchart" />
+      <h1>Thermal Optimization of Fins</h1>
+      <p>Enhancing heat transfer with reduced material through design iterations.</p>
+    </section>
+
+    <section class="content-section">
+      <h2>Overview</h2>
+      <p>
+        This project investigates the trade-off between heat transfer performance and material usage in fin-like structures.
+        Inspired by existing geometries from literature, the designs were recreated, simulated, and evaluated using FEA tools.
+      </p>
+
+      <h2>Design and Simulation Process</h2>
+      <p>
+        The workflow began with extracting reference geometries from research papers. These were modeled in CAD, meshed in ANSYS, and simulated for heat transfer.
+        Mass and temperature gradients were recorded to identify optimal designs.
+      </p>
+      <div class="image-gallery">
+        <img src="assets/projects/slotted_fins/modeling.png" alt="CAD Modeling" />
+        <img src="assets/projects/slotted_fins/mesh.png" alt="Meshing in ANSYS" />
+        <img src="assets/projects/slotted_fins/result.png" alt="Simulation Result" />
+      </div>
+
+      <h2>Outcome</h2>
+      <p>
+        Several fin configurations showed increased heat dissipation with a simultaneous reduction in material. The best design achieved <strong>20% improved transfer rate</strong> with <strong>15% less mass</strong> compared to the baseline geometry.
+      </p>
+
+      <h2>Tools Used</h2>
+      <ul>
+        <li>SolidWorks – CAD modeling</li>
+        <li>ANSYS – FEA simulation (steady-state thermal)</li>
+        <li>MATLAB – Data analysis and post-processing</li>
+      </ul>
+
+      <div class="cta">
+        <a href="assets/documents/thermal_fins_presentation.pdf" target="_blank">📎 Download Presentation</a>
+        <a href="projects.html">⬅ Back to Projects</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2025 Shurendher</p>
+      <div class="social">
+        <a href="https://www.linkedin.com/in/shurendher" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/shurendher" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://behance.net/your-behance" target="_blank" rel="noopener">Behance</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
