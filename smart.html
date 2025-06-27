@@ -3,17 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thermal Optimization of Fins</title>
+  <title>SMART: Satellite Motion Testbed</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
   <style>
     .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
       padding: 3rem 1rem;
     }
-    .hero img {
-      width: 80%;
-      max-width: 800px;
+    .hero iframe {
+      width: 100%;
+      max-width: 720px;
+      height: 405px;
       border-radius: 12px;
       margin-bottom: 1rem;
     }
@@ -26,17 +30,6 @@
     .content-section h2 {
       margin-top: 2rem;
       color: #333;
-    }
-    .image-gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-      margin: 2rem 0;
-    }
-    .image-gallery img {
-      width: 250px;
-      border-radius: 8px;
     }
     .cta {
       text-align: center;
@@ -60,7 +53,7 @@
       <nav>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="projects.html">Projects</a></li>
+          <li><a href="projects.html">Publications & Active Projects</a></li>
           <li><a href="resume.html">Experience</a></li>
           <li><a href="blog.html">Blog</a></li>
         </ul>
@@ -70,43 +63,33 @@
 
   <main>
     <section class="hero">
-      <img src="assets/projects/slotted_fins/ThermalOptimization.jpg" alt="Thermal Optimization Flowchart" />
-      <h1>Thermal Optimization of Fins</h1>
-      <p>Enhancing heat transfer with reduced material through design iterations.</p>
+      <iframe src="https://www.youtube.com/embed/DwIfQ7vHV64" title="SMART Video" frameborder="0" allowfullscreen></iframe>
+      <h1>SMART: Satellite Motion-mapping Robotic Testbed</h1>
+      <p>A tabletop testbed to emulate spacecraft attitude dynamics using 4 reaction wheels.</p>
     </section>
 
     <section class="content-section">
       <h2>Overview</h2>
       <p>
-        This project investigates the trade-off between heat transfer performance and material usage in fin-like structures.
-        Inspired by existing geometries from literature, the designs were recreated, simulated, and evaluated using FEA tools.
+        SMART is a Satellite Motion-mapping Robotic Testbed developed in our lab to simulate satellite attitude control on Earth. The system uses four reaction wheels arranged in a pyramid configuration to enable three-axis attitude control, mimicking real spacecraft behavior through controlled angular momentum exchange.
       </p>
 
-      <h2>Design and Simulation Process</h2>
-      <p>
-        The workflow began with extracting reference geometries from research papers. These were modeled in CAD, meshed in ANSYS, and simulated for heat transfer.
-        Mass and temperature gradients were recorded to identify optimal designs.
-      </p>
-      <div class="image-gallery">
-        <img src="assets/projects/slotted_fins/modeling.png" alt="CAD Modeling" />
-        <img src="assets/projects/slotted_fins/mesh.png" alt="Meshing in ANSYS" />
-        <img src="assets/projects/slotted_fins/result.png" alt="Simulation Result" />
-      </div>
-
-      <h2>Outcome</h2>
-      <p>
-        Several fin configurations showed increased heat dissipation with a simultaneous reduction in material. The best design achieved <strong>20% improved transfer rate</strong> with <strong>15% less mass</strong> compared to the baseline geometry.
-      </p>
-
-      <h2>Tools Used</h2>
+      <h2>My Contribution</h2>
       <ul>
-        <li>SolidWorks – CAD modeling</li>
-        <li>ANSYS – FEA simulation (steady-state thermal)</li>
-        <li>MATLAB – Data analysis and post-processing</li>
+        <li>Supported mechanical development of the wheel assembly and enclosure layout</li>
+        <li>Assisted in debugging control firmware and tuning the IMU-based attitude estimation system</li>
+        <li>Worked closely with the team to balance design trade-offs for structural integrity and performance</li>
+      </ul>
+
+      <h2>Key Features</h2>
+      <ul>
+        <li>Pyramidal reaction wheel configuration for full 3-DOF torque authority</li>
+        <li>Attitude stabilization using onboard IMU and closed-loop control</li>
+        <li>Low-cost, modular hardware platform for educational and research applications</li>
       </ul>
 
       <div class="cta">
-        <a href="assets/documents/thermal_fins_presentation.pdf" target="_blank">📎 Download Presentation</a>
+        <a href="https://www.youtube.com/watch?v=DwIfQ7vHV64" target="_blank">📺 Watch on YouTube</a>
         <a href="projects.html">⬅ Back to Projects</a>
       </div>
     </section>
@@ -116,9 +99,8 @@
     <div class="container footer-inner">
       <p>© 2025 Shurendher</p>
       <div class="social">
-        <a href="https://www.linkedin.com/in/shurendher" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/shurensampath/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://github.com/shurendher" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://behance.net/your-behance" target="_blank" rel="noopener">Behance</a>
       </div>
     </div>
   </footer>
