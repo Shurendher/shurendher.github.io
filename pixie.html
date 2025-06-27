@@ -73,43 +73,49 @@
 
   <main>
     <section class="hero">
-      <img src="assets/projects/slotted_fins/ThermalOptimization.jpg" alt="Thermal Optimization Flowchart" />
-      <h1>Thermal Optimization of Fins</h1>
-      <p>Enhancing heat transfer with reduced material through design iterations.</p>
+      <img src="assets/projects/manipulator/Pixie_Isometric.png" alt="Pixie Arm Render" />
+      <h1>Pixie: 4-DOF Robotic Manipulator</h1>
+      <p>A lightweight robotic arm design with modularity and embedded control in mind.</p>
     </section>
 
     <section class="content-section">
       <h2>Overview</h2>
       <p>
-        This project investigates the trade-off between heat transfer performance and material usage in fin-like structures.
-        Inspired by existing geometries from literature, the designs were recreated, simulated, and evaluated using FEA tools.
+        Pixie is a 4-DOF robotic manipulator currently in development. The design emphasizes modularity, ease of assembly, and integration with embedded motor drivers and sensors. Intended as a low-cost platform for prototyping robotic behaviors, Pixie is expected to be equipped with a camera at the end effector for visual tracking and learning-based tasks.
       </p>
 
-      <h2>Design and Simulation Process</h2>
-      <p>
-        The workflow began with extracting reference geometries from research papers. These were modeled in CAD, meshed in ANSYS, and simulated for heat transfer.
-        Mass and temperature gradients were recorded to identify optimal designs.
-      </p>
+      <h2>Design Features</h2>
+      <ul>
+        <li>Uses NEMA 17 stepper motors coupled with custom-designed cycloidal gearboxes</li>
+        <li>Compact design for desktop-scale manipulation tasks</li>
+        <li>Hollow structure allowing internal wiring and cable routing</li>
+        <li>Mount-ready for camera and gripper end effectors</li>
+      </ul>
+
       <div class="image-gallery">
-        <img src="assets/projects/slotted_fins/modeling.png" alt="CAD Modeling" />
-        <img src="assets/projects/slotted_fins/mesh.png" alt="Meshing in ANSYS" />
-        <img src="assets/projects/slotted_fins/result.png" alt="Simulation Result" />
+        <figure>
+          <img src="assets/projects/manipulator/Pixie_Render1.png" alt="Render Front View" />
+          <figcaption>Manipulator Front View</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/projects/manipulator/Pixie_Render2.png" alt="Render Side View" />
+          <figcaption>Manipulator Side View</figcaption>
+        </figure>
       </div>
 
-      <h2>Outcome</h2>
+      <h2>Future Applications</h2>
       <p>
-        Several fin configurations showed increased heat dissipation with a simultaneous reduction in material. The best design achieved <strong>20% improved transfer rate</strong> with <strong>15% less mass</strong> compared to the baseline geometry.
+        The long-term goal for Pixie is to integrate camera-based object tracking and apply imitation learning techniques for pick-and-place or interaction-based control. The manipulator will act as a testbed for vision-guided robotic learning, with an emphasis on adaptability and modular control architecture.
       </p>
 
-      <h2>Tools Used</h2>
+      <h2>Status & Roadmap</h2>
       <ul>
-        <li>SolidWorks – CAD modeling</li>
-        <li>ANSYS – FEA simulation (steady-state thermal)</li>
-        <li>MATLAB – Data analysis and post-processing</li>
+        <li>Mechanical design of all 4 joints complete</li>
+        <li>Cycloidal gearbox tested independently</li>
+        <li>Electronics integration and control testing expected post July 4th weekend</li>
       </ul>
 
       <div class="cta">
-        <a href="assets/documents/thermal_fins_presentation.pdf" target="_blank">📎 Download Presentation</a>
         <a href="projects.html">⬅ Back to Projects</a>
       </div>
     </section>
@@ -121,7 +127,6 @@
       <div class="social">
         <a href="https://www.linkedin.com/in/shurendher" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://github.com/shurendher" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://behance.net/your-behance" target="_blank" rel="noopener">Behance</a>
       </div>
     </div>
   </footer>
