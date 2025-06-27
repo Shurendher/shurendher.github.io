@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thermal Optimization of Fins</title>
+  <title>Design of Cycloidal Gearbox</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
   <style>
@@ -34,9 +34,18 @@
       justify-content: center;
       margin: 2rem 0;
     }
+    .image-gallery figure {
+      text-align: center;
+    }
     .image-gallery img {
       width: 250px;
       border-radius: 8px;
+    }
+    .image-gallery figcaption {
+      font-size: 0.85rem;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 0.3rem;
     }
     .cta {
       text-align: center;
@@ -70,43 +79,60 @@
 
   <main>
     <section class="hero">
-      <img src="assets/projects/slotted_fins/ThermalOptimization.jpg" alt="Thermal Optimization Flowchart" />
-      <h1>Thermal Optimization of Fins</h1>
-      <p>Enhancing heat transfer with reduced material through design iterations.</p>
+      <img src="assets/projects/cycloidal_gearbox/Cycloidal_Drive_ISO.png" alt="Cycloidal Drive" />
+      <h1>Design of Cycloidal Gearbox for Nema 17</h1>
+      <p>A compact and robust reduction gearbox design suitable for robotic joints and modular actuation systems.</p>
     </section>
 
     <section class="content-section">
       <h2>Overview</h2>
       <p>
-        This project investigates the trade-off between heat transfer performance and material usage in fin-like structures.
-        Inspired by existing geometries from literature, the designs were recreated, simulated, and evaluated using FEA tools.
+        Cycloidal gearboxes are ideal for applications that demand high torque, low backlash, and good shock load resistance. This project aims to design a modular cycloidal gearbox with a 9:1 reduction ratio, optimized for use with NEMA 17 stepper motors. The design uses a precision-generated cycloidal profile with 9 lobes and 10 pins, ensuring smooth motion and torque amplification. Components were designed to be 3D printable and easy to assemble, focusing on early prototyping and iterative development for future deployment in robotic arms.
       </p>
 
-      <h2>Design and Simulation Process</h2>
-      <p>
-        The workflow began with extracting reference geometries from research papers. These were modeled in CAD, meshed in ANSYS, and simulated for heat transfer.
-        Mass and temperature gradients were recorded to identify optimal designs.
-      </p>
+      <h2>Design Features</h2>
+      <ul>
+        <li>9:1 single-stage reduction using 10 pins and 9-lobe cycloidal disc</li>
+        <li>Input via eccentric shaft connected to NEMA 17 motor</li>
+        <li>Compact casing with top and bottom covers and fasteners</li>
+        <li>Designed with tolerances suitable for FDM 3D printing</li>
+        <li>Minimal backlash and good torque-to-size ratio</li>
+      </ul>
+
       <div class="image-gallery">
-        <img src="assets/projects/slotted_fins/modeling.png" alt="CAD Modeling" />
-        <img src="assets/projects/slotted_fins/mesh.png" alt="Meshing in ANSYS" />
-        <img src="assets/projects/slotted_fins/result.png" alt="Simulation Result" />
+        <figure>
+          <img src="assets/projects/cycloidal_gearbox/Cycloidal_Drive_ISO.png" alt="Isometric View" />
+          <figcaption>Isometric View</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/projects/cycloidal_gearbox/Cycloidal_Drive_SV.png" alt="Section View" />
+          <figcaption>Sectional View</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/projects/cycloidal_gearbox/Cycloidal_Drive_Printing.png" alt="Prototype Stage" />
+          <figcaption>Early 3D Printing Stage</figcaption>
+        </figure>
       </div>
 
-      <h2>Outcome</h2>
+      <h2>Motion Demonstration</h2>
+  <video width="640" height="480" controls>
+   <source src="assets/projects/cycloidal_gearbox/Cycloidal_Drive.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+      <h2>Next Steps</h2>
       <p>
-        Several fin configurations showed increased heat dissipation with a simultaneous reduction in material. The best design achieved <strong>20% improved transfer rate</strong> with <strong>15% less mass</strong> compared to the baseline geometry.
+        The next phase involves completing the assembly and evaluating the printed prototype under load conditions. Improvements will focus on structural strength, compactness, and stackability to build gearboxes for robotic joint actuation. Integration with sensors and drivers is planned for future iterations.
       </p>
 
       <h2>Tools Used</h2>
       <ul>
-        <li>SolidWorks – CAD modeling</li>
-        <li>ANSYS – FEA simulation (steady-state thermal)</li>
-        <li>MATLAB – Data analysis and post-processing</li>
+        <li>SolidWorks – CAD Modeling and Assembly</li>
+        <li>Fusion 360 – Motion Simulation</li>
+        <li>Creality Ender 3 – FDM 3D Printing</li>
       </ul>
 
       <div class="cta">
-        <a href="assets/documents/thermal_fins_presentation.pdf" target="_blank">📎 Download Presentation</a>
         <a href="projects.html">⬅ Back to Projects</a>
       </div>
     </section>
