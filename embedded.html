@@ -3,117 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mechatronics Projects</title>
+  <title>Embedded Projects</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
   <style>
-    .proj-grid {
-      display: grid;
-      gap: 2rem;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      margin: 3rem 0;
-    }
-
-    .proj-card {
-      position: relative;
-      overflow: hidden;
-      border-radius: var(--radius);
-      cursor: pointer;
-    }
-
-    .proj-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      transition: transform 0.3s ease, filter 0.3s ease;
-      display: block;
-    }
-
-    .proj-card a {
-      position: absolute;
-      bottom: 1rem;
-      left: 50%;
-      transform: translateX(-50%);
-      color: #fff;
-      font-weight: 700;
-      text-decoration: none;
-      font-size: 1.1rem;
-      z-index: 2;
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
-      opacity: 0;
-      transition: opacity 0.3s ease;
+      padding: 3rem 1rem;
     }
-
-    .proj-card:hover img {
-      transform: scale(1.05);
-      filter: brightness(0.4);
+    .hero h1 {
+      margin-bottom: 1rem;
     }
-
-    .proj-card:hover a {
-      opacity: 1;
+    .content-section {
+      padding: 2rem 1rem;
+      max-width: 900px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+    .content-section h2 {
+      margin-top: 2rem;
+      color: #333;
+    }
+    .content-section ul {
+      padding-left: 1.5rem;
     }
   </style>
 </head>
 <body>
-  <!-- ===== NAVBAR ===== -->
   <header class="navbar">
     <div class="container nav-inner">
       <a href="index.html" class="logo">Shurendher</a>
       <nav>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="pubproj.html">Publications & Active Projects</a></li>
+          <li><a href="projects.html">Publications & Active Projects</a></li>
           <li><a href="resume.html">Experience</a></li>
           <li><a href="blog.html">Blog</a></li>
         </ul>
-        <button class="burger" aria-label="Toggle navigation">☰</button>
       </nav>
     </div>
   </header>
 
-  <!-- ===== PROJECT GRID ===== -->
   <main>
-    <section class="container">
-      <h1>Mechatronics Projects</h1>
-      <p class="subheading">Page under construction. Project details coming soon....</p>
+    <section class="hero">
+      <h1>Robotics & Embedded Projects</h1>
+      <p>Page Under Construction — Big updates expected on the weekend of 06/26!</p>
+    </section>
 
-      <div class="proj-grid">
-        <div class="proj-card">
-          <img src="assets/projects/Embedded_Plotting/ThermalOptimization.jpg" alt="Embedded Plotting" />
-          <a href="EmbeddedPlotting.html">Linux tool for live plotting</a>
-        </div>
+    <section class="content-section">
+      <p>What to expect:</p>
+      <ul>
+        <li>Embedded Plotting - Development of low GUI, linux plotter similar to Arduino's serial plotter.</li>
+        <li>PiCamera Stream - Streaming live feed from PiCam to your web browser. Interesting application to monitor if your stove has been switched off in your house!! (Or on a simpler note, can be used for home security!!)</li>
+        <li>VL58L4CD - TOF sensor testing and characterization</li>
+      </ul>
 
-        <div class="proj-card">
-          <img src="assets/projects/PiCamera_stream/Cycloidal_Drive_ISO.png" alt="PiCamera Stream" />
-          <a href="PiCameraStream.html">PiCamera Stream</a>
-        </div>
+      <!--
+      <section class="content-section">
+        Original content goes here...
+      </section>
+      -->
 
-        <div class="proj-card">
-          <img src="assets/projects/ClosedLoopStepper/Pixie 1.jpg" alt="Closed Loop Stepper" />
-          <a href="closedloopstepper.html">Driving a closed loop stepper</a>
-        </div>
-
-        <!-- Add more proj-card blocks here as needed -->
-      </div>
     </section>
   </main>
 
-  <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="container footer-inner">
       <p>© 2025 Shurendher</p>
       <div class="social">
-        <a href="https://www.linkedin.com/in/shurendher" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/shurensampath/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://github.com/shurendher" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://behance.net/your-behance" target="_blank" rel="noopener">Behance</a>
       </div>
     </div>
   </footer>
-
-  <script>
-    const burger = document.querySelector('.burger');
-    const nav = document.querySelector('.nav-links');
-    burger.addEventListener('click', () => nav.classList.toggle('open'));
-  </script>
 </body>
 </html>
