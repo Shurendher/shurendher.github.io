@@ -3,17 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thermal Optimization of Fins</title>
+  <title>Soft Robotic Gripper</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
   <style>
     .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
       padding: 3rem 1rem;
     }
     .hero img {
-      width: 80%;
-      max-width: 800px;
+      width: 60%;
+      max-width: 600px;
       border-radius: 12px;
       margin-bottom: 1rem;
     }
@@ -60,7 +63,7 @@
       <nav>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="projects.html">Projects</a></li>
+          <li><a href="projects.html">Publications & Active Projects</a></li>
           <li><a href="resume.html">Experience</a></li>
           <li><a href="blog.html">Blog</a></li>
         </ul>
@@ -70,45 +73,68 @@
 
   <main>
     <section class="hero">
-      <img src="assets/projects/slotted_fins/ThermalOptimization.jpg" alt="Thermal Optimization Flowchart" />
-      <h1>Thermal Optimization of Fins</h1>
-      <p>Enhancing heat transfer with reduced material through design iterations.</p>
+      <img src="assets/projects/pneunets/SoftRoboticGripper1.jpg" alt="Soft Robotic Gripper Top View" />
+      <h1>Soft Robotic Gripper</h1>
+      <p>Development of a flexible pneumatic gripper for safe interaction with sensitive components.</p>
     </section>
 
     <section class="content-section">
       <h2>Overview</h2>
       <p>
-        This project investigates the trade-off between heat transfer performance and material usage in fin-like structures.
-        Inspired by existing geometries from literature, the designs were recreated, simulated, and evaluated using FEA tools.
+        This project focuses on developing a soft robotic gripper based on <strong>PneuNet</strong> structures. These grippers use pneumatically actuated networks that deform in response to air pressure, enabling them to gently grasp delicate objects. Designed and fabricated entirely in-house using rubber molding techniques, this gripper is intended to be mounted on a 3-DOF manipulator for handling sensitive and irregularly shaped parts.
       </p>
 
-      <h2>Design and Simulation Process</h2>
-      <p>
-        The workflow began with extracting reference geometries from research papers. These were modeled in CAD, meshed in ANSYS, and simulated for heat transfer.
-        Mass and temperature gradients were recorded to identify optimal designs.
-      </p>
-      <div class="image-gallery">
-        <img src="assets/projects/slotted_fins/modeling.png" alt="CAD Modeling" />
-        <img src="assets/projects/slotted_fins/mesh.png" alt="Meshing in ANSYS" />
-        <img src="assets/projects/slotted_fins/result.png" alt="Simulation Result" />
-      </div>
-
-      <h2>Outcome</h2>
-      <p>
-        Several fin configurations showed increased heat dissipation with a simultaneous reduction in material. The best design achieved <strong>20% improved transfer rate</strong> with <strong>15% less mass</strong> compared to the baseline geometry.
-      </p>
-
-      <h2>Tools Used</h2>
+      <h2>Design & Fabrication</h2>
       <ul>
-        <li>SolidWorks – CAD modeling</li>
-        <li>ANSYS – FEA simulation (steady-state thermal)</li>
-        <li>MATLAB – Data analysis and post-processing</li>
+        <li>Gripper structure cast in silicone elastomer using custom-designed molds</li>
+        <li>Internal chambers designed to expand under pressure, enabling curling motion</li>
+        <li>Mesh reinforcement used for structural stability and directional actuation</li>
+        <li>Multi-layer molding and integration of pneumatic tubes for air supply</li>
       </ul>
 
-      <div class="cta">
-        <a href="assets/documents/thermal_fins_presentation.pdf" target="_blank">📎 Download Presentation</a>
-        <a href="projects.html">⬅ Back to Projects</a>
+      <div class="image-gallery">
+        <figure>
+          <img src="assets/projects/pneunets/20200215_170858.jpg" alt="Casting Mold" />
+          <figcaption>Initial casting in mold setup</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/projects/pneunets/20200218_135902.jpg" alt="Internal Chamber Mold" />
+          <figcaption>Chamber mold with fiber mesh</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/projects/pneunets/20200227_142858.jpg" alt="Gripper Demolded" />
+          <figcaption>Extracted gripper post-curing</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/projects/pneunets/20200215_113209.jpg" alt="Gripper Base" />
+          <figcaption>Base mold with mounting cavity</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/projects/pneunets/20200215_113219.jpg" alt="Internal Ribs" />
+          <figcaption>Ribbed pneunet structures</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/projects/pneunets/20200215_113231.jpg" alt="Gripper Texture" />
+          <figcaption>Gripper texture and final structure</figcaption>
+        </figure>
       </div>
+
+      <h2>Why Soft Robotics?</h2>
+      <p>
+        Soft robotics enables safe and adaptive manipulation, especially for tasks involving humans or fragile objects. Unlike rigid arms, soft grippers conform to the shape of the object, reducing the risk of damage and allowing high compliance. The image below from Harvard’s Soft Robotics Lab demonstrates a typical application:
+      </p>
+
+      <div class="image-gallery">
+        <figure>
+          <img src="assets/projects/pneunets/Soft_Robotics_reference.jpeg" alt="Reference: Harvard Soft Gripper" />
+          <figcaption>Soft gripper interacting with a human hand</figcaption>
+        </figure>
+      </div>
+
+      <p style="text-align:center; font-size:0.9rem;">
+        Reference: <a href="https://softroboticstoolkit.com/book/gripper" target="_blank">Soft Robotics Toolkit</a>
+      </p>
+
     </section>
   </main>
 
@@ -116,9 +142,8 @@
     <div class="container footer-inner">
       <p>© 2025 Shurendher</p>
       <div class="social">
-        <a href="https://www.linkedin.com/in/shurendher" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/shurensampath/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://github.com/shurendher" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://behance.net/your-behance" target="_blank" rel="noopener">Behance</a>
       </div>
     </div>
   </footer>
