@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Embedded Plotting – Real‑Time Sensor Visualization</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root { --radius: 18px; }
+    .hero { text-align:center; padding: 3rem 1rem; }
+    .badge { display:inline-block; padding:.25rem .6rem; border-radius:999px; font-size:.8rem; background:#eef2ff; color:#3730a3; margin-right:.5rem; }
+    .content { max-width: 980px; margin: 0 auto; padding: 0 1rem 4rem; line-height: 1.75; }
+    .two-col { display:grid; grid-template-columns: 1fr; gap:1.25rem; }
+    @media (min-width: 900px){ .two-col { grid-template-columns: 1.2fr .8fr; } }
+    .card { background:#fff; border-radius: var(--radius); box-shadow: 0 8px 30px rgba(0,0,0,.06); padding:1.25rem; }
+    .code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; background:#0f172a; color:#e2e8f0; border-radius:12px; padding:1rem; overflow:auto; }
+    .muted { color:#555; }
+    .hlist { display:flex; flex-wrap:wrap; gap:.5rem; }
+    .screenshot { width:100%; height:220px; border-radius:14px; background:#f3f4f6; border:1px dashed #d1d5db; display:flex; align-items:center; justify-content:center; color:#6b7280; }
+    .kpi { display:grid; grid-template-columns: repeat(2, 1fr); gap:.75rem; }
+    .kpi .card { padding:.9rem 1rem; }
+    details { background:#fafafa; border:1px solid #eee; border-radius:12px; padding:.75rem 1rem; }
+    details > summary { cursor:pointer; font-weight:600; }
+    .section-title { margin:2.2rem 0 0.75rem; }
+    .list-tight li { margin:.25rem 0; }
+    .table { width:100%; border-collapse: collapse; font-size:.95rem; }
+    .table th, .table td { border:1px solid #e5e7eb; padding:.55rem .7rem; text-align:left; }
+    .table th { background:#f8fafc; }
+  </style>
+</head>
+<body>
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">Shurendher</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Publications & Active Projects</a></li>
+          <li><a href="resume.html">Experience</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+        <button class="burger" aria-label="Toggle navigation">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <main>
+    <section class="hero container">
+      <h1>Embedded Plotting</h1>
+      <p class="muted">Real‑time sensor visualization, CSV logging, and TCP streaming on Raspberry Pi</p>
+      <div class="hlist" style="justify-content:center; margin-top:.75rem;">
+        <span class="badge">Python 3</span>
+        <span class="badge">PyQt5 / PySide6</span>
+        <span class="badge">PyQtGraph</span>
+        <span class="badge">Raspberry Pi</span>
+        <span class="badge">TCP</span>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="two-col">
+        <div class="card">
+          <h2 class="section-title">Overview</h2>
+          <p>
+            A lightweight Python tool that turns raw sensor streams (e.g., HC‑SR04, IMUs, ToF) into <strong>live plots</strong>,
+            <strong>CSV logs</strong>, and a <strong>network stream</strong> your laptop can subscribe to. Built with a Qt event loop for
+            smooth UI at embedded rates (20–200 Hz) and hardened parsing for noisy serial/text feeds.
+          </p>
+
+          <h3 class="section-title">Features</h3>
+          <ul>
+            <li>📊 <strong>Real‑time plotting</strong> of multiple variables with adjustable Y‑limits & refresh rate.</li>
+            <li>📂 <strong>CSV logging</strong> with auto headers from the first valid message.</li>
+            <li>🌐 <strong>TCP streaming</strong> so other machines can watch the same live feed.</li>
+            <li>⚡ <strong>Non‑blocking I/O</strong> via <code>QSocketNotifier</code> (no busy waits, responsive UI).</li>
+            <li>🛡 <strong>Robust parser</strong> for <code>key: value | key: value</code> lines; ignores malformed tokens.</li>
+          </ul>
+
+          <h3 class="section-title">Architecture</h3>
+          <div class="card" style="background:#0b1020;color:#c7d2fe">
+<pre class="code" style="background:transparent;color:inherit">Producer (sensor or simulator)
+    │  text lines: "dist_cm: 173.4 | echo_us: 10092.0"
+    ▼
+Consumer (plotting.py)
+  ├─ Parser  ─► Dict[str,float]
+  ├─ Plotter ─► PyQtGraph curves
+  ├─ Logger  ─► data.csv
+  └─ Stream  ─► TCP server :5000 (multi‑client)
+</pre>
+          </div>
+        </div>
+
+        <aside class="card">
+          <h3 class="section-title">Screenshots</h3>
+          <div class="screenshot">Add PyQtGraph screenshot here</div>
+          <div class="screenshot" style="margin-top:.75rem;">Add Windows TCP client screenshot here</div>
+
+          <h3 class="section-title">KPIs (typical)</h3>
+          <div class="kpi">
+            <div class="card"><strong>20–50 Hz</strong><br/><span class="muted">Smooth UI</span></div>
+            <div class="card"><strong>&lt; 50–100 ms</strong><br/><span class="muted">Avg latency</span></div>
+            <div class="card"><strong>&lt; 35%</strong><br/><span class="muted">CPU @50 Hz</span></div>
+            <div class="card"><strong>Flat</strong><br/><span class="muted">Memory over 2 hrs</span></div>
+          </div>
+        </aside>
+      </div>
+
+      <h2 class="section-title">Quick Start</h2>
+      <div class="card">
+        <p><strong>1) Install (pip)</strong></p>
+<pre class="code">python3 -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+pip install pyqtgraph PyQt5  # or: pip install pyqtgraph PySide6
+</pre>
+        <p class="muted">On Raspberry Pi (APT alternative): <code>sudo apt-get install python3-pyqt5 python3-pyqtgraph</code></p>
+
+        <p><strong>2) Run the demo (no hardware)</strong></p>
+<pre class="code">python3 test_signal.py | python3 plotting.py \
+  --plot --vars dist_cm,echo_us \
+  --ylim 0 300 --log data.csv --stream 5000
+</pre>
+        <p><strong>3) Connect from another machine (Windows)</strong></p>
+<pre class="code"># Install Ncat via Nmap, then:
+ncat &lt;PI_IP&gt; 5000
+</pre>
+      </div>
+
+      <h2 class="section-title">Dependencies</h2>
+      <table class="table">
+        <thead><tr><th>Type</th><th>Package</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Python</td><td>pyqtgraph</td><td>Fast real‑time plotting</td></tr>
+          <tr><td>Python</td><td>PyQt5 <em>or</em> PySide6</td><td>Qt UI and networking</td></tr>
+          <tr><td>System (Pi)</td><td>pigpio</td><td>Only for HC‑SR04 hardware capture</td></tr>
+          <tr><td>Tools (client)</td><td>telnet / ncat</td><td>Optional; or use provided <code>tcp_client.py</code></td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title">Usage Examples</h2>
+      <div class="card">
+<pre class="code"># Auto‑discover variables from first line
+python3 test_signal.py | python3 plotting.py --plot --ylim 0 400
+
+# Plot specific variables + log CSV
+python3 test_signal.py | python3 plotting.py --plot --vars dist_cm,echo_us --log demo.csv
+
+# Stream only (headless collector)
+python3 test_signal.py | python3 plotting.py --stream 5000
+</pre>
+      </div>
+
+      <h2 class="section-title">Testing & Metrics</h2>
+      <div class="card">
+        <ul class="list-tight">
+          <li><strong>Throughput</strong>: sustained lines/sec without lag (50–200 Hz tested).</li>
+          <li><strong>Latency</strong>: producer → plot delay (target &lt; 100 ms @ 50 Hz).</li>
+          <li><strong>Stability</strong>: 2–8 hr soak; flat memory; no UI hangs.</li>
+          <li><strong>Parsing</strong>: malformed input is ignored without crashing.</li>
+        </ul>
+      </div>
+
+      <h2 class="section-title">Troubleshooting</h2>
+      <details>
+        <summary>Qt warning: platform plugin “wayland” / HiDPI attribute</summary>
+        <p>Set <code>export QT_QPA_PLATFORM=xcb</code> and ensure <code>QApplication.setAttribute(AA_EnableHighDpiScaling)</code> is called <em>before</em> constructing the app.</p>
+      </details>
+      <details>
+        <summary>Windows telnet shows messy lines</summary>
+        <p>Use <code>ncat</code> or the Python <code>tcp_client.py</code>, or send CRLF (<code>\r\n</code>) from the server.</p>
+      </details>
+
+      <h2 class="section-title">Roadmap</h2>
+      <ul>
+        <li>Built‑in demo generator (<code>--demo</code>)</li>
+        <li>Per‑variable subplots & filtering</li>
+        <li>Web dashboard (browser client)</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2025 Shurendher</p>
+      <div class="social">
+        <a href="https://www.linkedin.com/in/shurensampath/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/shurendher" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    if (burger) burger.addEventListener('click', () => nav.classList.toggle('open'));
+  </script>
+</body>
+</html>
