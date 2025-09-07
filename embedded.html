@@ -7,32 +7,55 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
   <style>
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    .proj-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      margin: 3rem 0;
+    }
+
+    .proj-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius, 18px);
+      cursor: pointer;
+    }
+
+    .proj-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.3s ease, filter 0.3s ease;
+      display: block;
+    }
+
+    .proj-card a {
+      position: absolute;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 1.1rem;
+      z-index: 2;
       text-align: center;
-      padding: 3rem 1rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
     }
-    .hero h1 {
-      margin-bottom: 1rem;
+
+    .proj-card:hover img {
+      transform: scale(1.05);
+      filter: brightness(0.4);
     }
-    .content-section {
-      padding: 2rem 1rem;
-      max-width: 900px;
-      margin: 0 auto;
-      line-height: 1.8;
-    }
-    .content-section h2 {
-      margin-top: 2rem;
-      color: #333;
-    }
-    .content-section ul {
-      padding-left: 1.5rem;
+
+    .proj-card:hover a {
+      opacity: 1;
     }
   </style>
 </head>
 <body>
+  <!-- ===== NAVBAR ===== -->
   <header class="navbar">
     <div class="container nav-inner">
       <a href="index.html" class="logo">Shurendher</a>
@@ -43,33 +66,40 @@
           <li><a href="resume.html">Experience</a></li>
           <li><a href="blog.html">Blog</a></li>
         </ul>
+        <button class="burger" aria-label="Toggle navigation">☰</button>
       </nav>
     </div>
   </header>
 
+  <!-- ===== PROJECT GRID ===== -->
   <main>
-    <section class="hero">
+    <section class="container">
       <h1>Embedded Projects</h1>
-      <p>Page Under Construction — Big updates expected on the weekend of 07/25!</p>
-    </section>
+      <p class="subheading">Click any project to view details</p>
 
-    <section class="content-section">
-      <p>What to expect:</p>
-      <ul>
-        <li><strong>Embedded Plotting</strong> - Development of low GUI, linux plotter similar to Arduino's serial plotter.</li>
-        <li><strong>PiCamera Stream</strong> - Streaming live feed from PiCam to your web browser. Interesting application to monitor if your stove has been switched off in your house!! (Or on a simpler note, can be used for home security!!)</li>
-        <li><strong>VL58L4CD</strong> - TOF sensor testing and characterization</li>
-      </ul>
+      <div class="proj-grid">
+        <!-- Embedded Plotting -->
+        <div class="proj-card">
+          <img src="assets/projects/embedded_plotting/plotting_thumb.jpg" alt="Embedded Plotting" />
+          <a href="EmbeddedPlotting.html">Embedded Plotting</a>
+        </div>
 
-      <!--
-      <section class="content-section">
-        Original content goes here...
-      </section>
-      -->
+        <!-- PiCamera Stream -->
+        <div class="proj-card">
+          <img src="assets/projects/picamera/picamera_thumb.jpg" alt="PiCamera Stream" />
+          <a href="PiCamera.html">PiCamera Stream</a>
+        </div>
 
+        <!-- VL58L4CD -->
+        <div class="proj-card">
+          <img src="assets/projects/vl53l4cd/vl53_thumb.jpg" alt="VL58L4CD ToF Sensor" />
+          <a href="VL58L4CD.html">VL58L4CD – ToF Testing</a>
+        </div>
+      </div>
     </section>
   </main>
 
+  <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="container footer-inner">
       <p>© 2025 Shurendher</p>
@@ -79,5 +109,11 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    burger.addEventListener('click', () => nav.classList.toggle('open'));
+  </script>
 </body>
 </html>
