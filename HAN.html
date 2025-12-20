@@ -163,7 +163,16 @@
 
       <h2>Considering all these, what's the scope of my work?</h2>
       <p>
-        As you might have observed, there could be a thousand permutation and combination depending on sub-field of HAN and rules. 
+        As you might have observed, there could be a thousand permutation and combination depending on sub-field of HAN and rules. And since, I am the human developing the framework here (not the robot), the idea is to develop a base framework with a limited set of features and later develop it in the future.  
+      </p>
+      <p>
+        Thus, in my work I focus on path planning with assumption that there is a perfect percetion of human with their corresponding states known to the robot within sensing range. Among the wide variety of HAN rules available, I select three:
+        <ul>
+          <li>Proxemics (PR): A safety buffer around a human that the robot should avoid entering to respect personal space and ensure comfort. </li>
+          <li>Back Space (BS): A zone behind a human that the robot should avoid navigating into, as humans cannot see what's behind them, making sudden movements unsafe.</li>
+          <li>Field of View (FV): The visible area in front of a human; robots should avoid staying within this field to remain clear when human moves.</li>
+        </ul>
+          <li>Again, depending on the context, environment and agents, these three dimensions tend to change. For example an older human might require the robot to maintain a larger space than a younger one.</li>
       </p>
         
       <div class="image-gallery">
