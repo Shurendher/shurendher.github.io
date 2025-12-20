@@ -308,6 +308,19 @@ body {
   color: var(--accent);
 }
 
+/* List formatting for project pages */
+ol, ul {
+  margin-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.4rem;
+}
+
+ol > li > strong {
+  font-size: 1.05rem;
+}
+
 /* ===== RESPONSIVE NAV ===== */
 @media (max-width: 640px) {
   .nav-links {
