@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>4 DOF Manipulator</title>
+  <title>6-DOF Modular Robotic Manipulator</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
   <style>
@@ -74,24 +74,58 @@
   <main>
     <section class="hero">
       <img src="assets/projects/pixie/Pixie 1.jpg" alt="Pixie Arm Render" />
-      <h1>Pixie: 4-DOF Robotic Manipulator</h1>
-      <p>A lightweight robotic arm design with modularity and embedded control in mind.</p>
+      <h1>6-DOF Modular Robotic Manipulator</h1>
+      <p>A lightweight robotic arm  focussed on modular joints, controls and kinematics-based motion.</p>
     </section>
 
     <section class="content-section">
       <h2>Overview</h2>
       <p>
-        Pixie is a 4-DOF robotic manipulator currently in development. The design emphasizes modularity, ease of assembly, and integration with embedded motor drivers and sensors. Intended as a low-cost platform for prototyping robotic behaviors, Pixie is expected to be equipped with a camera at the end effector for visual tracking and learning-based tasks.
+        This project focuses on the design and development of a desktop-scale 6-DOF robotic manipulator, with emphasis on mechanical robustness, modularity, and embedded control. The system is being developed incrementally, starting from power distribution and base actuation, with future extensions into kinematics-based motion planning, teleoperation, and vision-guided control.
       </p>
 
-      <h2>Design Features</h2>
-      <ul>
-        <li>Uses NEMA 17 and Nema 23 stepper motors coupled with custom-designed cycloidal gearboxes for increased torque</li>
-        <li>Compact design for desktop-scale manipulation tasks</li>
-        <li>Utilizes TMC 2130 for enhanced stepper current control, and motor load feedback for human-friendly application</li>
-        <li>Currently in early-stage, big updates expected after July 25th weekend!</li>
-        <li>Ultimate aim is to develop arm for object tracking and imitation learning applications</li>
-      </ul>
+      <h2>What's Completed So Far?</h2>
+      <ol>
+        <li> Mechanical Design and Assembly:</li>
+          <ul>
+            <li>Design calculations and component selection with total load capacity of 350 g and reach of 0.25 m</li>
+            <li>Designed a rigid base enclosure to house computation, power distribution, and actuation</li>
+            <li>CAD and 3D printing of:</li>
+              <ul>
+                <li> Base enclosure</li>
+                <li> Electronics mounting plate</li>
+                <li> Servo mounting interface</li>
+              </ul>
+            <li>Designed base yaw joint interface using metal servo horn coupling</li>
+            <li>Considered alignment, backlash reduction, and serviceability during design</li>
+          </ul>
+        <li> Power & Electronics Architecture:</li>
+          <ul>
+            <li>Designed and built a custom power distribution board (PDB) for multi-servo operation</li>
+            <li>Implemented:</li>
+              <ul>
+                <li>Bulk input capacitors for transient current handling</li>
+                <li>Separate logic (Raspberry Pi) and actuator power domains</li>
+              </ul>
+            <li>Integrated:</li>
+              <ul>
+                <li>Raspberry Pi (high-level control)</li>
+                <li>PCA9685 PWM driver (servo control)</li>
+              </ul>
+            <li>Verified individual as well as bulk servo operation using low-level PWM control</li>
+          </ul>
+        <li>Actuator Selection & Sizing</li>
+          <ul>
+            <li>Performed torque calculations for joint loading for total load capacity of 350 g and reach of 0.25 m</li>
+            <li>Selected servos based on:</li>
+              <ul>
+                <li>torque requirements</li>
+                <li>joint role (base, shoulder, wrist)</li>
+                <li>form factor and availability</li>
+              </ul>
+            <li>Validated control ranges experimentally (pulse width vs angle)</li>
+          </ul>
+      </ol>
 
       <div class="image-gallery">
         <figure>
