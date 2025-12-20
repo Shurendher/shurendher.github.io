@@ -134,10 +134,31 @@
         </figure>
       </div>
 
-      <h2>Future Applications</h2>
+      <h2>System Architecture</h2>
       <p>
-        The long-term goal for Pixie is to integrate camera-based object tracking and apply imitation learning techniques for pick-and-place or interaction-based control. The manipulator will act as a testbed for vision-guided robotic learning, with an emphasis on adaptability and modular control architecture.
+        The system uses a central Raspberry Pi for high-level coordination, with a PCA9685 PWM controller handling deterministic servo actuation. Power distribution is handled via a custom-built board to isolate motor transients and ensure stable operation during load changes.
       </p>
+
+      <h2>Current Focus</h2>
+      <ul>
+        <li>Designing and printing the base yaw joint and shoulder pitch interface</li>
+        <li>Ensuring mechanical stiffness and repeatability</li>
+        <li>Establishing consistent joint zeroing and calibration procedures</li>
+      </ul>
+
+      <h2>Planned Next Steps</h2>
+      <ul>
+        <li>Complete mechanical assembly of all 6 joints</li>
+        <li>Implement joint-level calibration and limits</li>
+        <li>Develop:</li>
+          <ul>
+            <li>Teleoperation interface</li>
+            <li>Keyframe-based motion playback</li>
+          </ul>
+        <li>Introduce forward and inverse kinematics</li>
+        <li>Build a simulation/digital twin (Gazebo / Isaac Sim)</li>
+        <li>Extend toward vision-guided manipulation</li>
+      </ul>
 
     </section>
   </main>
