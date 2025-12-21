@@ -310,40 +310,23 @@
                 </figure>
               </div>
             </ol>
-      <ul>
-        <li>9:1 single-stage reduction using 10 pins and 9-lobe cycloidal disc</li>
-        <li>Input via eccentric shaft (eccentricity = 3.5 mm) connected to NEMA 17 motor</li>
-        <li>Designed with tolerances suitable for FDM 3D printing</li>
-        <li>Aim to achieve minimal backlash and good torque-to-size ratio</li>
-      </ul>
 
-      <div class="image-gallery">
-        <figure>
-          <img src="assets/projects/cycloidal_gearbox/Cycloidal_Drive_ISO.png" alt="Isometric View" />
-          <figcaption>Isometric View</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/projects/cycloidal_gearbox/Cycloidal_Drive_SV.png" alt="Section View" />
-          <figcaption>Sectional View</figcaption>
-        </figure>
-      </div>
-
-      <div class="image-gallery">
-        <figure>
-          <img src="assets/projects/cycloidal_gearbox/CycloidalGearbox_Printing.jpeg" alt="Prototype Stage" />
-          <figcaption>Initial prototyping for tolerance check</figcaption>
-        </figure>
-      </div>
-
-      <h2>Motion Simulation</h2>
-  <video width="640" height="480" controls>
-   <source src="assets/projects/cycloidal_gearbox/Cycloidal_Drive.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-
+      <h2>Alright, so what can we iterpret from these results?</h2>
+      <p>
+        In short, the AMR is able to successfully reach the end position without violating the HAN rules and avoiding collision with the static obstacles. The FIS and EPF worked well together to adaptively tune the factors.<br><br>
+        To dive and dissect more, feel free to read my two publications: <a href="https://link.springer.com/chapter/10.1007/978-3-031-46778-3_15" target="_blank">NAFIPS</a> and <a href="https://www.oaepublish.com/articles/ces.2023.34" target="_blank">CES</a>. I have explained in depth about all these above stuff.<br>
+        And definitely, I welcome you to reach out to me for any clarifications! 
+      </p>
       <h2>Next Steps</h2>
       <p>
-        The next phase involves completing the assembly and evaluating the printed prototype under load conditions. Improvements will focus on structural strength, compactness, and stackability to build gearboxes for robotic joint actuation. Integration with sensors and drivers is planned for future iterations.
+        So, I have many parallel and perpendicular areas that I am interested in exploring. Notable:
+        <ul>
+          <li>We know that FIS-EPF works well to adaptively select the factors and navigate well depending on the environmental constraints. But is it robust and scalable? (i.e.) We tested for three test cases, but what about a million cases that the robot might face in a real world deployment? My immediate answer: No, its not gonna work straight away. Thats because, FIS has it's own set of parameters called rules (different from HAN rules) and membership functions. In my work, I have selected them intuitively and for it to work on diverse environment, the system should be trained (or optimized) for the environment. <em>This is my immediate and current focus.</em></li>
+          <li>We have built a framework with limited number of rules and FIS-EPF. But I'd love to see it expanded to include a wide range of HAN rules and different planning techniques.</li>
+          <li>How about adding a vison and human-motion prediction stacks?</li>
+          <li>Would'nt it be great to test the system in a real-world setting?</li>
+          <li>The list could go unending.............🤫😂😂</li>
+        </ul>
       </p>
       
     </section>
