@@ -229,7 +229,18 @@
           <li>
             <strong>Fuzzy Inference System (FIS):</strong>
             <p>
-              A Fuzzy Inference System is a decision-making framework that uses fuzzy logic to handle uncertainty and approximate reasoning—similar to how humans make decisions. Instead of strict true/false rules, it works with degrees of truth to map inputs to outputs using if-then rules, fuzzy sets, and membership functions.
+              A Fuzzy Inference System is a decision-making framework that uses fuzzy logic to handle uncertainty and approximate reasoning—similar to how humans make decisions. Instead of strict true/false rules, it works with degrees of truth to map inputs to outputs using if-then rules, fuzzy sets, and membership functions.<br><br>
+              <strong>Why FIS?</strong><br>
+              <div class="image-gallery">
+              <figure>
+                <img src="assets/projects/HAN/FIS1.png" alt="FIS Structure" />
+                <figcaption>Isometric View</figcaption>
+              </figure>
+            </div>
+              Initially, I thought of going to a RL-based route. However, one of the advantages of FIS is its interpretability and considering the human centric rules, we might need to understand what's happening and how can we improve.<br><br>
+              <strong>Now, how are we using FIS to assist EPF?</strong><br>
+              In potential field path planning, scaling factors (or weights) control the strength of attractive forces (from the goal) and repulsive forces (from obstacles), determining how strongly the robot reacts to these forces; they balance the robot's speed vs. smoothness, how far it keeps from obstacles, and help avoid getting stuck in local minima, with proper tuning crucial for safe, efficient, and smooth navigation.<br>
+              FIS helps here by adaptively selecting these factors based on the environment. For example, if you are far from end position and there are no obstacles/human, speed up....
             </p>
           </li>
         </ol>
