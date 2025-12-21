@@ -193,7 +193,7 @@
         There are numerous path planning techniques considered in the realm of HAN. Notably, probabilistic road maps, optimal reciprocal collision avoidance, model predictive control, reinforcement learning, rapidly exploring random trees, etc..... While each one has its own merits and demerits, for my work I chose potential field based technique, primarily of it's mathematical simplicity.
         <ol>
           <li>
-            Explain potential field-based technique.....
+            <strong>Explain potential field-based technique.....</strong>
             <p>
               In simple perspective, consider that robot as south pole of a magnet and destination of the robot as north pole. Under nominal conditions, the robot naturally gets attracted towards the destination. However, consider any obstacle in the environment as south pole. Now, the cummulative effect results in the robot repulsed away from the obstacles and attracted towards destination effecting in a net potential field! Sounds easy right??? Hold that thought.....
             </p>
@@ -214,9 +214,10 @@
             <p>
               Potential field (Artificial potential field (APF), generally used.....) suffers from certain drawbacks
               <ul>
-                <li> Local Minima: A situation where the robot gets stuck in a position that feels optimal (no better path nearby) but isn’t the actual goal, causing it to stop or oscillate without reaching the target.</li>
-                <li>Goal not reachable due to obstacle nearby (GNRON): A situation in which the robot cannot reach goal when the an obstacle is close to the end position.</li>
+                <li> <strong>Local Minima:</strong> A situation where the robot gets stuck in a position that feels optimal (no better path nearby) but isn’t the actual goal, causing it to stop or oscillate without reaching the target.</li>
+                <li> <strong>Goal not reachable due to obstacle nearby (GNRON):</strong> A situation in which the robot cannot reach goal when the an obstacle is close to the end position.</li>
               </ul>
+              <em>Trust me..... I've exparienced these first hand (read my published work - <a href="https://link.springer.com/chapter/10.1007/978-3-031-46778-3_15" target="_blank">NAFIPS</a>)</em>
             </p>
           </li>
         </ol>
