@@ -230,13 +230,14 @@
             <strong>Fuzzy Inference System (FIS):</strong>
             <p>
               A Fuzzy Inference System is a decision-making framework that uses fuzzy logic to handle uncertainty and approximate reasoning—similar to how humans make decisions. Instead of strict true/false rules, it works with degrees of truth to map inputs to outputs using if-then rules, fuzzy sets, and membership functions.<br><br>
-              <strong>Why FIS?</strong><br>
               <div class="image-gallery">
               <figure>
                 <img src="assets/projects/HAN/FIS1.png" alt="FIS Structure" />
-                <figcaption>Isometric View</figcaption>
+                <figcaption>Structure of FIS</figcaption>
               </figure>
             </div>
+            
+              <strong>Why FIS?</strong><br>
               Initially, I thought of going to a RL-based route. However, one of the advantages of FIS is its interpretability and considering the human centric rules, we might need to understand what's happening and how can we improve.<br><br>
               <strong>Now, how are we using FIS to assist EPF?</strong><br>
               In potential field path planning, scaling factors (or weights) control the strength of attractive forces (from the goal) and repulsive forces (from obstacles), determining how strongly the robot reacts to these forces; they balance the robot's speed vs. smoothness, how far it keeps from obstacles, and help avoid getting stuck in local minima, with proper tuning crucial for safe, efficient, and smooth navigation.<br>
@@ -246,7 +247,31 @@
         </ol>
       </p>
 
-      <h2>Design Features</h2>
+      <h2>What does this combination result in????</h2>
+            <p>
+              I tested this combination in three test cases:
+            </p>
+            <ol>
+              <li> <strong>Case 1:</strong> We examine a simple environment that includes a human and a few static obstacles. The objective here is to test whether we can successfully overcome local minima and GNRON.
+                <video width="640" height="480" controls>
+                 <source src="assets/projects/HAN/Scene1.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <div class="image-gallery">
+        <figure>
+          <img src="assets/projects/HAN/Legend.png" alt="Legend" />
+          <figcaption>Video Legend</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/projects/HAN/Scene1_AMR.png" alt="AMR path" />
+          <figcaption>Robot's path</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/projects/HAN/Scene1_Distance.png" alt="AMR distance" />
+          <figcaption>Distance to obstacles</figcaption>
+        </figure>
+      </div>
+            </ol>
       <ul>
         <li>9:1 single-stage reduction using 10 pins and 9-lobe cycloidal disc</li>
         <li>Input via eccentric shaft (eccentricity = 3.5 mm) connected to NEMA 17 motor</li>
