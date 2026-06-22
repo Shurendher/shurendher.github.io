@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shurendher | Integrated Systems Engineer</title>
     <style>
+        /* ===== CSS VARIABLES & RESET ===== */
         * {
             margin: 0;
             padding: 0;
@@ -42,7 +43,7 @@
             padding: 0 2rem;
         }
 
-        /* Navigation */
+        /* ===== NAVIGATION ===== */
         nav {
             position: fixed;
             top: 0;
@@ -104,7 +105,7 @@
             width: 100%;
         }
 
-        /* Hero Section */
+        /* ===== HERO SECTION ===== */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -146,17 +147,6 @@
             animation: nameSlideIn 1.2s ease-out;
         }
 
-        @keyframes nameSlideIn {
-            0% {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
         .hero-title {
             font-size: clamp(1.2rem, 3vw, 1.8rem);
             color: var(--color-text-muted);
@@ -186,6 +176,7 @@
             animation: fadeInUp 1.2s ease-out 0.6s both;
         }
 
+        /* ===== BUTTONS ===== */
         .btn {
             padding: 1rem 2.5rem;
             border: none;
@@ -220,17 +211,7 @@
             box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
+        /* ===== SCROLL INDICATOR ===== */
         .scroll-indicator {
             position: absolute;
             bottom: 40px;
@@ -256,12 +237,7 @@
             background: linear-gradient(to bottom, var(--color-text-muted), transparent);
         }
 
-        @keyframes float {
-            0%, 100% { transform: translateX(-50%) translateY(0); }
-            50% { transform: translateX(-50%) translateY(15px); }
-        }
-
-        /* Bio Section */
+        /* ===== BIO SECTION ===== */
         .bio-section {
             padding: 6rem 2rem;
             background: linear-gradient(180deg, rgba(59, 130, 246, 0.05) 0%, rgba(168, 85, 247, 0.03) 100%);
@@ -285,11 +261,18 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 5rem;
             position: relative;
             margin: 0 auto;
             border: 3px solid var(--color-border);
             box-shadow: 0 20px 50px rgba(59, 130, 246, 0.3);
+            overflow: hidden;
+        }
+
+        .headshot img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
         }
 
         .headshot::after {
@@ -298,6 +281,7 @@
             inset: 0;
             border-radius: 50%;
             background: linear-gradient(45deg, rgba(255,255,255,0.1), transparent);
+            pointer-events: none;
         }
 
         .bio-content h2 {
@@ -317,7 +301,7 @@
             margin-bottom: 1rem;
         }
 
-        /* Timeline Section */
+        /* ===== TIMELINE SECTION ===== */
         .timeline-section {
             padding: 6rem 2rem;
         }
@@ -419,7 +403,7 @@
             line-height: 1.6;
         }
 
-        /* Slideshow Section */
+        /* ===== SLIDESHOW SECTION ===== */
         .slideshow-section {
             padding: 6rem 2rem;
             background: linear-gradient(180deg, rgba(59, 130, 246, 0.05) 0%, rgba(168, 85, 247, 0.03) 100%);
@@ -446,12 +430,16 @@
             animation: fadeIn 0.5s;
         }
 
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         .slide.active {
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 4rem;
-            flex-direction: column;
         }
 
         .slide-number {
@@ -463,6 +451,7 @@
             padding: 0.5rem 1rem;
             border-radius: 4px;
             font-size: 0.85rem;
+            z-index: 5;
         }
 
         .prev, .next {
@@ -480,6 +469,7 @@
             background: rgba(0, 0, 0, 0.5);
             user-select: none;
             z-index: 10;
+            border: none;
         }
 
         .next {
@@ -515,7 +505,7 @@
             background-color: var(--color-primary);
         }
 
-        /* Projects Section */
+        /* ===== PROJECTS SECTION ===== */
         .projects-section {
             padding: 6rem 2rem;
         }
@@ -543,17 +533,6 @@
             box-shadow: 0 20px 40px rgba(59, 130, 246, 0.25);
         }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
         .project-image {
             width: 100%;
             height: 250px;
@@ -566,6 +545,12 @@
             overflow: hidden;
         }
 
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         .project-image::before {
             content: '';
             position: absolute;
@@ -574,6 +559,7 @@
             right: 0;
             bottom: 0;
             background: linear-gradient(45deg, rgba(255,255,255,0.1), transparent);
+            pointer-events: none;
         }
 
         .project-image.research {
@@ -652,7 +638,7 @@
             content: '→';
         }
 
-        /* Contact Section */
+        /* ===== CONTACT SECTION ===== */
         .contact-section {
             padding: 6rem 2rem;
             background: linear-gradient(180deg, rgba(59, 130, 246, 0.05) 0%, rgba(168, 85, 247, 0.03) 100%);
@@ -713,6 +699,7 @@
             font-size: 1.5rem;
         }
 
+        /* ===== FOOTER ===== */
         footer {
             padding: 2rem;
             text-align: center;
@@ -720,6 +707,48 @@
             border-top: 1px solid var(--color-border);
         }
 
+        /* ===== ANIMATIONS ===== */
+        @keyframes nameSlideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(15px); }
+        }
+
+        .scroll-indicator {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
         @media (max-width: 768px) {
             nav .container {
                 flex-direction: column;
@@ -779,7 +808,7 @@
     </style>
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- ===== NAVIGATION ===== -->
     <nav>
         <div class="container">
             <a href="index.html" class="logo">SK</a>
@@ -793,7 +822,7 @@
         </div>
     </nav>
 
-    <!-- Hero -->
+    <!-- ===== HERO SECTION ===== -->
     <section class="hero">
         <div class="hero-content">
             <h1 class="hero-name">Shurendher</h1>
@@ -812,10 +841,12 @@
         </div>
     </section>
 
-    <!-- Bio Section with Headshot -->
+    <!-- ===== BIO SECTION ===== -->
     <section class="bio-section">
         <div class="bio-container">
-            <img src="assets/images/profile.jpg" alt="Shurendher headshot" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+            <div class="headshot">
+                <img src="assets/images/profile.jpg" alt="Shurendher headshot">
+            </div>
             <div class="bio-content">
                 <h2>Who I Am</h2>
                 <p class="bio-text">
@@ -828,7 +859,7 @@
         </div>
     </section>
 
-    <!-- Timeline Section -->
+    <!-- ===== TIMELINE SECTION ===== -->
     <section class="timeline-section">
         <div class="section-header">
             <h2 class="section-title">My Journey</h2>
@@ -873,31 +904,31 @@
         </div>
     </section>
 
-    <!-- Slideshow Section -->
+    <!-- ===== SLIDESHOW SECTION ===== -->
     <section class="slideshow-section">
         <div class="section-header">
-            <h2 class="section-title">Work in Progress</h2>
-            <p class="section-subtitle">A glimpse of projects being built</p>
+            <h2 class="section-title">Workshop & Lab Experience</h2>
+            <p class="section-subtitle">Tools and equipment I work with regularly</p>
         </div>
         <div class="slideshow-container">
             <div class="slide active">
-                <img src="assets/images/LaserCutter1.jpeg" style="width: 100%; height: 100%; object-fit: cover;">
+                <img src="assets/images/LaserCutter1.jpeg" alt="Laser Cutter">
             </div>
             <div class="slide">
-                <img src="assets/images/VaccumForming1.jpeg" style="width: 100%; height: 100%; object-fit: cover;">
+                <img src="assets/images/VaccumForming1.jpeg" alt="Vacuum Forming Machine">
             </div>
             <div class="slide">
-                <img src="assets/images/LIDAR1.jpeg" style="width: 100%; height: 100%; object-fit: cover;">
+                <img src="assets/images/LIDAR1.jpeg" alt="LIDAR Sensor">
             </div>
             <div class="slide">
-                <img src="assets/images/3DPrinting1.jpeg" style="width: 100%; height: 100%; object-fit: cover;">
+                <img src="assets/images/3DPrinting1.jpeg" alt="3D Printing">
             </div>
             <div class="slide">
-                <img src="assets/images/PowerDistributionBoard1.jpeg" style="width: 100%; height: 100%; object-fit: cover;">
+                <img src="assets/images/PowerDistributionBoard1.jpeg" alt="Power Distribution Board">
             </div>
 
-            <a class="prev" onclick="changeSlide(-1)">❮</a>
-            <a class="next" onclick="changeSlide(1)">❯</a>
+            <button class="prev" onclick="changeSlide(-1)">❮</button>
+            <button class="next" onclick="changeSlide(1)">❯</button>
 
             <div class="slide-number"><span id="slideNum">1</span> / 5</div>
         </div>
@@ -910,7 +941,7 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- ===== PROJECTS SECTION ===== -->
     <section id="projects" class="projects-section">
         <div class="section-header">
             <h2 class="section-title">Featured Projects</h2>
@@ -918,7 +949,7 @@
         </div>
 
         <div class="projects-grid">
-            <!-- HAN Research -->
+            <!-- Project 1: HAN Research -->
             <div class="project-card">
                 <div class="project-image research">🧠</div>
                 <div class="project-content">
@@ -934,11 +965,11 @@
                         <span class="project-tag">MATLAB</span>
                         <span class="project-tag">Robotics</span>
                     </div>
-                    <a href="projects/HAN.html" class="project-link">View Research</a>
+                    <a href="projects/human-aware-navigation.html" class="project-link">View Research</a>
                 </div>
             </div>
-            
-            <!-- 6-DOF Manipulator -->
+
+            <!-- Project 2: 6-DOF Manipulator -->
             <div class="project-card">
                 <div class="project-image mechanical">🦾</div>
                 <div class="project-content">
@@ -957,7 +988,7 @@
                 </div>
             </div>
 
-            <!-- Modular Actuator -->
+            <!-- Project 3: Modular Actuator -->
             <div class="project-card">
                 <div class="project-image embedded">⚡</div>
                 <div class="project-content">
@@ -976,14 +1007,14 @@
                 </div>
             </div>
 
-            <!-- Camera Tracking -->
+            <!-- Project 4: RPi Vision Tracking -->
             <div class="project-card">
                 <div class="project-image embedded">📷</div>
                 <div class="project-content">
                     <h3 class="project-title">RPi Vision Tracking System</h3>
                     <p class="project-meta">2024 • Embedded + Computer Vision</p>
                     <p class="project-description">
-                        Building a Raspberry Pi-based real-time object detection and tracking system. Creating foundation for autonomous spatial awareness and vision-guided navigation.
+                        Building a Raspberry Pi-based real-time object detection and tracking system. Creating foundation for autonomous spatial awareness and vision-guided navigation in indoor environments.
                     </p>
                     <div class="project-tags">
                         <span class="project-tag">Computer Vision</span>
@@ -997,7 +1028,7 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- ===== CONTACT SECTION ===== -->
     <section id="contact" class="contact-section">
         <div class="contact-content">
             <h2 class="contact-title">Let's Connect</h2>
@@ -1021,26 +1052,40 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ===== FOOTER ===== -->
     <footer>
         <p>&copy; 2025 Shurendher. Robotics • Mechatronics • Embedded Systems.</p>
     </footer>
 
+    <!-- ===== JAVASCRIPT ===== -->
     <script>
         let currentSlideIndex = 1;
 
+        /**
+         * Change slide by increment/decrement
+         * @param {number} n - Number to add/subtract from current slide
+         */
         function changeSlide(n) {
             showSlide(currentSlideIndex += n);
         }
 
+        /**
+         * Jump to specific slide
+         * @param {number} n - Slide number to display
+         */
         function currentSlide(n) {
             showSlide(currentSlideIndex = n);
         }
 
+        /**
+         * Display specific slide and update dots
+         * @param {number} n - Slide number
+         */
         function showSlide(n) {
             const slides = document.querySelectorAll('.slide');
             const dots = document.querySelectorAll('.dot');
 
+            // Wrap around
             if (n > slides.length) {
                 currentSlideIndex = 1;
             }
@@ -1048,15 +1093,17 @@
                 currentSlideIndex = slides.length;
             }
 
+            // Remove active class from all slides and dots
             slides.forEach(slide => slide.classList.remove('active'));
             dots.forEach(dot => dot.classList.remove('active'));
 
+            // Add active class to current slide and dot
             slides[currentSlideIndex - 1].classList.add('active');
             dots[currentSlideIndex - 1].classList.add('active');
             document.getElementById('slideNum').textContent = currentSlideIndex;
         }
 
-        // Auto-advance slideshow
+        // Auto-advance slideshow every 5 seconds
         setInterval(() => {
             changeSlide(1);
         }, 5000);
